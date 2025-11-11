@@ -1,167 +1,233 @@
 <!DOCTYPE html>
 <html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EduMeal | Edukasi Gizi Cerdas</title>
-  <link rel="stylesheet" href="output.css">
-  <style>
-    html {
-      scroll-behavior: smooth; /* agar scroll halus */
-    }
-  </style>
-</head>
-<body class="font-sans bg-green-50">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduMeal | Edukasi Gizi Cerdas</title>
+    <link rel="stylesheet" href="output.css" />
+    <style>
+      html {
+        scroll-behavior: smooth; /* agar scroll halus */
+      }
+    </style>
+  </head>
+  <body class="font-sans bg-green-50">
+    <!-- 🔝 NAVBAR FIXED -->
+    <div data-include="partials/navbar.html"></div>
 
-  <!-- 🔝 NAVBAR FIXED -->
-  <div data-include="partials/navbar.html"></div>
-
-  <!-- 🌿 SECTION: HOME -->
-  <section id="home" class="h-screen flex flex-col justify-center items-center text-center px-4 bg-green-100 pt-24">
-    <h2 class="text-4xl font-bold text-green-700">Wujudkan Pola Makan Sehat Bersama EduMeal 🍎</h2>
-    <p class="mt-4 text-gray-700 max-w-xl">
-      EduMeal membantu kamu mengenal makanan bergizi dan menghitung kebutuhan kalori harianmu dengan mudah.
-    </p>
-    <a href="#kalkulator" class="mt-6 inline-block bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">
-      Coba Kalkulator Gizi
-    </a>
-  </section>
-
-  <!-- 📘 SECTION: ARTIKEL -->
-  <section id="artikel" class="min-h-screen bg-white py-20 px-6">
-  <div class="container mx-auto">
-    <h2 class="text-3xl font-bold text-green-700 mb-6 text-center">Artikel Edukasi Gizi</h2>
-    
-    <div id="artikelContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-  </div>
-</section>
-
-
-
-  <!-- 🍽️ SECTION: MAKANAN -->
- <section id="makanan" class="pt-24 p-8">
-    <h2 class="text-2xl font-bold text-green-700 mb-4">Daftar Makanan Bergizi</h2>
-
-    <!-- Input pencarian -->
-    <input id="search" type="text" placeholder="Cari makanan..." 
-           class="border rounded-lg p-2 mb-6 w-full max-w-sm">
-
-    <!-- Grid Card -->
-    <div id="listMakanan" class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6"></div>
-  </section>
-
-  <!-- 🍽️ SECTION: CEK GIZI -->
-<section id="cekGizi" class="min-h-screen bg-green-50 py-20 ">
-  <div class="container mx-auto text-center">
-    <h2 class="text-3xl font-bold text-green-700 mb-6">Cek Gizi dari Menu Harianmu</h2>
-    <p class="text-gray-600 mb-4">Masukkan makanan yang kamu makan hari ini (pisahkan dengan tanda +)</p>
-
-    <input id="menuInput" type="text" 
-           placeholder="Contoh: nasi goreng + teh manis + mie instan"
-           class="border rounded-lg p-3 w-full max-w-xl mb-4">
-
-    <button id="cekBtn" 
-            class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition">
-      Cek Gizi
-    </button>
-
-    <div id="hasilGizi" class="mt-6 text-left max-w-xl mx-auto bg-white rounded-xl p-6 shadow hidden">
-      <h3 class="font-bold text-lg text-green-700 mb-3">Hasil Analisis Gizi</h3>
-      <div id="detailGizi" class="text-gray-700 text-sm space-y-1"></div>
-      <hr class="my-3">
-      <p id="penilaian" class="font-semibold text-gray-800"></p>
-    </div>
-  </div>
-</section>
-
-  <!-- ⚖️ SECTION: KALKULATOR -->
-  <section id="kalkulator" class="min-h-screen bg-green-50 py-20 px-6">
-    <div class="container mx-auto max-w-lg bg-white p-6 rounded-xl shadow-lg">
-      <h2 class="text-2xl font-bold text-green-700 mb-4 text-center">Kalkulator Kebutuhan Kalori</h2>
-
-      <label>Berat Badan (kg)</label>
-      <input id="berat" type="number" class="border rounded-lg w-full p-2 mb-3">
-
-      <label>Tinggi Badan (cm)</label>
-      <input id="tinggi" type="number" class="border rounded-lg w-full p-2 mb-3">
-
-      <label>Umur</label>
-      <input id="umur" type="number" class="border rounded-lg w-full p-2 mb-3">
-
-      <label>Jenis Kelamin</label>
-      <select id="gender" class="border rounded-lg w-full p-2 mb-3">
-        <option value="pria">Pria</option>
-        <option value="wanita">Wanita</option>
-      </select>
-
-      <label>Aktivitas Harian</label>
-      <select id="aktivitas" class="border rounded-lg w-full p-2 mb-3">
-        <option value="1.2">Sedentary</option>
-        <option value="1.375">Ringan</option>
-        <option value="1.55">Sedang</option>
-        <option value="1.725">Berat</option>
-      </select>
-
-      <button onclick="hitungKalori()" 
-              class="bg-green-600 text-white w-full p-2 rounded-lg hover:bg-green-700">
-        Hitung
-      </button>
-
-      <p id="hasil" class="text-center mt-4 font-semibold text-green-700"></p>
-    </div>
-  </section>
-  <!-- ❓ SECTION: QUIZ -->
-
-  <section id="quiz" class="p-8 bg-green-50">
-  <h2 class="text-2xl font-bold text-green-700 mb-6">Quiz Gizi  🍽️</h2>
-
-  <div id="quizContainer" class="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-md text-center">
-    <h3 id="pertanyaan" class="text-lg font-semibold mb-4 text-gray-800"></h3>
-    <div id="pilihanContainer" class="space-y-3 mb-4"></div>
-    <button id="nextBtn" 
-            class="hidden bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
-      Soal Berikutnya →
-    </button>
-    <p id="jawaban" class="mt-4 text-lg font-semibold"></p>
-  </div>
-</section>
-
-  
-
-  <!-- ℹ️ SECTION: TENTANG -->
-  <section id="tentang" class="min-h-screen bg-green-100 py-20 px-6">
-    <div class="container mx-auto text-center max-w-2xl">
-      <h2 class="text-3xl font-bold text-green-700 mb-4">Tentang EduMeal</h2>
-      <p class="text-gray-700">
-        EduMeal dibuat untuk membantu masyarakat memahami pentingnya gizi seimbang
-        melalui pendekatan digital yang mudah digunakan. 
+    <!-- 🌿 SECTION: HOME -->
+    <section
+      id="home"
+      class="h-screen flex flex-col justify-center items-center text-center px-4 bg-green-100 pt-24"
+    >
+      <h2 class="text-4xl font-bold text-green-700">
+        Wujudkan Pola Makan Sehat Bersama EduMeal 🍎
+      </h2>
+      <p class="mt-4 text-gray-700 max-w-xl">
+        EduMeal membantu kamu mengenal makanan bergizi dan menghitung kebutuhan
+        kalori harianmu dengan mudah.
       </p>
-    </div>
-  </section>
+      <a
+        href="#kalkulator"
+        class="mt-6 inline-block bg-green-600 text-white px-6 py-3 rounded-lg text-lg font-bold hover:bg-green-700 transition"
+        onclick="document.getElementById('kalkulator').scrollIntoView({ behavior: 'smooth' });"
+      >
+        Coba Kalkulator Gizi
+      </a>
+    </section>
 
-  <!-- ⚓ FOOTER -->
-  <div data-include="partials/footer.html"></div>
+    <!-- 📘 SECTION: ARTIKEL -->
+    <section id="artikel" class="min-h-screen bg-white py-20 px-6">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-green-700 mb-6 text-center">
+          Artikel Edukasi Gizi
+        </h2>
 
-  <!-- ⚙️ SCRIPT -->
-  
+        <div
+          id="artikelContainer"
+          class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+        ></div>
+      </div>
+    </section>
 
+    <!-- 🍽️ SECTION: MAKANAN -->
+    <section id="makanan" class="pt-24 p-8">
+      <h2 class="text-2xl font-bold text-green-700 mb-4">
+        Daftar Makanan Bergizi
+      </h2>
 
-<script src="js/Kalkulator.js"></script>
+      <!-- Input pencarian -->
+      <input
+        id="search"
+        type="text"
+        placeholder="Cari makanan..."
+        class="border rounded-lg p-2 mb-6 w-full max-w-sm"
+      />
 
-<script src="js/data.js"></script>
-<script src="js/makanan.js"></script>
-<script src="js/quizdata.js"></script>
-<script src="js/quiz.js"></script>
-<script src="js/artikelData.js"></script>
-<script src="js/gizi.js"></script>
-  
+      <!-- Grid Card -->
+      <div
+        id="listMakanan"
+        class="grid sm:grid-cols-2 lg:grid-cols-5 gap-6"
+      ></div>
+    </section>
 
+    <!-- 🍽️ SECTION: CEK GIZI -->
+    <section
+      id="cekGizi"
+      class="mt-10 bg-green-50 py-10 transition-all duration-500"
+    >
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-green-700 mb-6">
+          Cek Gizi dari Menu Harianmu
+        </h2>
+        <p class="text-gray-600 mb-4">
+          Masukkan makanan yang kamu makan hari ini (pisahkan dengan tanda +)
+        </p>
 
+        <input
+          id="menuInput"
+          type="text"
+          placeholder="Contoh: nasi goreng + teh manis + mie instan"
+          class="border rounded-lg p-3 w-full max-w-xl mb-4"
+        />
 
-<script src="js/include.js"></script>
+        <button
+          id="cekBtn"
+          class="bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition"
+        >
+          Cek Gizi
+        </button>
 
+        <div
+          id="hasilGizi"
+          class="mt-6 text-left max-w-xl mx-auto bg-white rounded-xl p-6 shadow opacity-0 scale-95 hidden transition-all duration-500"
+        >
+          <div class="flex justify-between items-center mb-3">
+            <h3 class="font-bold text-lg text-green-700">
+              Hasil Analisis Gizi
+            </h3>
+            <button
+              id="closeHasil"
+              class="text-red-500 hover:text-red-700 text-lg font-bold transition"
+              title="Tutup hasil"
+            >
+              ✖
+            </button>
+          </div>
 
+          <div id="detailGizi" class="text-gray-700 text-sm space-y-1"></div>
+          <hr class="my-3" />
+          <p id="penilaian" class="font-semibold text-gray-800"></p>
+        </div>
+      </div>
+    </section>
 
+    <!-- ⚖️ SECTION: KALKULATOR -->
+    <section
+      id="kalkulator"
+      class="bg-green-50 py-16 px-6 transition-all duration-500"
+    >
+      <div class="container mx-auto max-w-lg bg-white p-6 rounded-xl shadow-lg">
+        <h2 class="text-2xl font-bold text-green-700 mb-4 text-center">
+          Kalkulator Kebutuhan Kalori
+        </h2>
 
-</body>
+        <label>Berat Badan (kg)</label>
+        <input
+          id="berat"
+          type="number"
+          class="border rounded-lg w-full p-2 mb-3"
+        />
+
+        <label>Tinggi Badan (cm)</label>
+        <input
+          id="tinggi"
+          type="number"
+          class="border rounded-lg w-full p-2 mb-3"
+        />
+
+        <label>Umur</label>
+        <input
+          id="umur"
+          type="number"
+          class="border rounded-lg w-full p-2 mb-3"
+        />
+
+        <label>Jenis Kelamin</label>
+        <select id="gender" class="border rounded-lg w-full p-2 mb-3">
+          <option value="pria">Pria</option>
+          <option value="wanita">Wanita</option>
+        </select>
+
+        <label>Aktivitas Harian</label>
+        <select id="aktivitas" class="border rounded-lg w-full p-2 mb-3">
+          <option value="1.2">Sedentary</option>
+          <option value="1.375">Ringan</option>
+          <option value="1.55">Sedang</option>
+          <option value="1.725">Berat</option>
+        </select>
+
+        <button
+          onclick="hitungKalori()"
+          class="bg-green-600 text-white w-full p-2 rounded-lg hover:bg-green-700"
+        >
+          Hitung
+        </button>
+
+        <p id="hasil" class="text-center mt-4 font-semibold text-green-700"></p>
+      </div>
+    </section>
+    <!-- ❓ SECTION: QUIZ -->
+
+    <section id="quiz" class="p-8 bg-green-50">
+      <h2 class="text-2xl font-bold text-green-700 mb-6 text-center">
+        Quiz Gizi 🍽️
+      </h2>
+
+      <div
+        id="quizContainer"
+        class="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-md text-center"
+      >
+        <h3
+          id="pertanyaan"
+          class="text-lg font-semibold mb-4 text-gray-800"
+        ></h3>
+        <div id="pilihanContainer" class="space-y-3 mb-4"></div>
+        <button
+          id="nextBtn"
+          class="hidden bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition"
+        >
+          Soal Berikutnya →
+        </button>
+        <p id="jawaban" class="mt-4 text-lg font-semibold"></p>
+      </div>
+    </section>
+
+    <!-- ℹ️ SECTION: TENTANG -->
+    <section id="tentang" class="min-h-screen bg-green-100 py-20 px-6">
+      <div class="container mx-auto text-center max-w-2xl">
+        <h2 class="text-3xl font-bold text-green-700 mb-4">Tentang EduMeal</h2>
+        <p class="text-gray-700">
+          EduMeal dibuat untuk membantu masyarakat memahami pentingnya gizi
+          seimbang melalui pendekatan digital yang mudah digunakan.
+        </p>
+      </div>
+    </section>
+
+    <!-- ⚓ FOOTER -->
+    <div data-include="partials/footer.html"></div>
+
+    <!-- ⚙️ SCRIPT -->
+
+    <script src="js/Kalkulator.js"></script>
+
+    <script src="js/data.js"></script>
+    <script src="js/makanan.js"></script>
+    <script src="js/quizdata.js"></script>
+    <script src="js/quiz.js"></script>
+    <script src="js/artikelData.js"></script>
+    <script src="js/gizi.js"></script>
+
+    <script src="js/include.js"></script>
+  </body>
 </html>
