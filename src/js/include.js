@@ -13,31 +13,26 @@ async function includeHTML() {
       console.error("Error memuat file:", file, err);
     }
   }
+  
+  // Initialize navbar toggle after all includes are loaded
+  const navbarElement = document.querySelector('[data-include*="navbar"]');
+  if (navbarElement && navbarElement.innerHTML.includes('modeToggle')) {
+    initNavbarToggle();
+    // Initialize dark mode after navbar is included
+    if (typeof initDarkMode === 'function') {
+      // Delay slightly to ensure DOM is fully updated
+      setTimeout(initDarkMode, 50);
+    }
+  }
 }
 document.addEventListener("DOMContentLoaded", includeHTML);
-// js/include.js
-document.addEventListener("DOMContentLoaded", function () {
-  const includeElements = document.querySelectorAll("[data-include]");
-  
-  includeElements.forEach(async el => {
-    const file = el.getAttribute("data-include");
-    const response = await fetch(file);
-    const html = await response.text();
-    el.innerHTML = html;
-
-    // 🧠 Tambahkan inisialisasi setelah navbar selesai dimuat
-    if (file.includes("navbar.html")) {
-      initNavbarToggle();
-    }
-  });
-});
 
 // 🧩 Fungsi toggle menu dipisahkan
 function initNavbarToggle() {
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobileMenu');
 
-  if (!menuBtn || !mobileMenu) return; // pastikan elemen ditemukan
+  if (!menuBtn || !mobileMenu) return; // pastikan elemen ditemuk
 
   menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');

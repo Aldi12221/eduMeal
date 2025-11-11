@@ -2,11 +2,14 @@ function initDarkMode() {
   const toggleBtn = document.getElementById('modeToggle');
   const html = document.documentElement;
 
-  if (!toggleBtn) return; 
+  if (!toggleBtn) {
+    console.warn('Dark mode toggle button not found. Make sure the navbar is loaded first.');
+    return;
+  }
 
   // 1. Ambil tema tersimpan, default ke 'light' jika belum ada
-  const savedTheme = localStorage.theme;
-  
+  const savedTheme = localStorage.getItem('theme');
+
   // 2. Terapkan mode hanya berdasarkan Local Storage
   if (savedTheme === 'dark') {
     html.classList.add('dark');
@@ -15,11 +18,11 @@ function initDarkMode() {
     // Jika 'light' atau tidak ada (undefined), gunakan mode terang
     html.classList.remove('dark');
     toggleBtn.textContent = '🌙'; // Icon mode terang
-    
-    // Opsional: Pastikan Local Storage diinisialisasi ke 'light' 
+
+    // Opsional: Pastikan Local Storage diinisialisasi ke 'light'
     // agar pengecekan berikutnya lebih mudah, tetapi tidak wajib.
     if (!savedTheme) {
-        localStorage.theme = 'light';
+        localStorage.setItem('theme', 'light');
     }
   }
 
@@ -27,23 +30,21 @@ function initDarkMode() {
   toggleBtn.addEventListener('click', () => {
     if (html.classList.contains('dark')) {
       html.classList.remove('dark');
-      localStorage.theme = 'light';
+      localStorage.setItem('theme', 'light');
       toggleBtn.textContent = '🌙';
     } else {
       html.classList.add('dark');
-      localStorage.theme = 'dark';
+      localStorage.setItem('theme', 'dark');
       toggleBtn.textContent = '☀️';
     }
   });
 }
 
-// Perhatian: Penggunaan setTimeout untuk DOMContentLoaded tidak ideal
-// Lebih baik pastikan navbar dimuat sebelum initDarkMode dipanggil.
-document.addEventListener("DOMContentLoaded", () => {
-    // Jika Anda TIDAK menggunakan include.js, Anda bisa langsung memanggil:
-    // initDarkMode();
-    
-    // Jika Anda menggunakan include.js dan TIDAK bisa memodifikasinya
-    // agar ada callback, penggunaan setTimeout terpaksa dilakukan:
-    setTimeout(initDarkMode, 500); 
-});
+// Only run if DOM is already loaded, otherwise wait for it
+if (document.readyState === 'loading') {
+  document.addEventListener("DOMContentLoaded", initDarkMode);
+} else {
+  // DOM is already loaded, try to initialize directly
+  // Delay slightly to ensure elements are available after inclusion
+  setTimeout(initDarkMode, 100);
+}
