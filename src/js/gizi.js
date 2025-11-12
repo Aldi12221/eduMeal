@@ -23,7 +23,12 @@ cekGiziSection.classList.add("pb-08");
 cekBtn.addEventListener("click", () => {
   const input = inputMenu.value.toLowerCase();
   if (!input) {
-    alert("Silakan masukkan menu makananmu dulu 🍴");
+    Swal.fire({
+      icon: "warning",
+      title: "Oops...",
+      text: "Silakan masukkan menu makananmu dulu 🍴",
+      theme: "auto",
+    });
     return;
   }
 

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EduMeal | Edukasi Gizi Cerdas</title>
-    <link rel="stylesheet" href="add.css">
+    <link rel="stylesheet" href="add.css" />
     <link rel="stylesheet" href="output.css" />
     <style>
       html {
@@ -17,89 +17,98 @@
     <div data-include="partials/navbar.html"></div>
 
     <!-- 🌿 SECTION: HOME -->
-  <section
-  id="home"
-  class="relative min-h-screen flex flex-col md:flex-row items-center justify-between overflow-hidden px-8 md:px-16 pt-24 transition-colors duration-700"
->
-  
-
-
- <div
- class="absolute inset-0 bg-black/10"
- ></div>
-
-  <!-- 💬 Konten -->
-  <div class="md:w-1/2 space-y-6 text-center md:text-left relative z-20">
-    <h1 class="text-4xl md:text-5xl font-extrabold text-green-300 dark:text-green-400 leading-tight">
-      Nikmati Hidangan <span class="text-green-600 ">Sehatmu</span> Bersama EduMeal
-    </h1>
-
-    <p class="text-gray-700 ">
-      Kami hadir untuk membantu kamu mengenal gizi seimbang, makanan bergizi, dan pola hidup sehat 🌱
-    </p>
-
-    <a
-      href="#kalkulator"
-      class="inline-block bg-green-600 text-white px-8 py-3 rounded-lg text-lg shadow-md hover:bg-green-700 transition"
+    <section
+      id="home"
+      class="relative min-h-screen flex flex-col md:flex-row items-center justify-between overflow-hidden px-8 md:px-16 pt-24 transition-colors duration-700"
     >
-      Mulai Sekarang
-    </a>
+      <div class="absolute inset-0 bg-black/10"></div>
 
-    
-  </div>
+      <!-- 💬 Konten -->
+      <div class="md:w-1/2 space-y-6 text-center md:text-left relative z-20">
+        <h1
+          class="text-4xl md:text-5xl font-extrabold text-green-300 dark:text-green-400 leading-tight"
+        >
+          Nikmati Hidangan <span class="text-green-600">Sehatmu</span> Bersama
+          EduMeal
+        </h1>
 
-  <!-- 🥬 Gambar -->
-  <div class="relative md:w-1/2 flex justify-center mt-10 md:mt-0 z-20">
-    <div
-      class="absolute bg-green-100 dark:bg-green-900/40 rounded-full w-72 h-72 md:w-96 md:h-96 top-0 md:top-8 transition-all duration-700 blur-sm"
-    ></div>
+        <p class="text-gray-700">
+          Kami hadir untuk membantu kamu mengenal gizi seimbang, makanan
+          bergizi, dan pola hidup sehat 🌱
+        </p>
 
-    <div
-      class="absolute -top-4 md:-top-6 left-1/2 transform -translate-x-1/2 bg-white dark:bg-gray-800/90 border-2 border-green-500 px-4 py-2 rounded-full shadow-md z-30 flex items-center gap-2 animate-fade-in backdrop-blur-sm transition-all duration-700"
-    >
-      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-2 0-4 2-4 4s2 4 4 4 4-2 4-4-2-4-4-4zm0 0V2m0 20v-6m0-10l-2-2m2 2l2-2" />
-      </svg>
-      <span class="text-green-700 dark:text-green-300 font-semibold text-sm md:text-base">
-        100% Fresh & Organic
-      </span>
-    </div>
+        <a
+          href="#kalkulator"
+          class="inline-block bg-green-600 text-white px-8 py-3 rounded-lg text-lg shadow-md hover:bg-green-700 transition"
+        >
+          Mulai Sekarang
+        </a>
+      </div>
 
-    <img
-      src="assets/daun.png"
-      alt="Daun Sehat"
-      class="absolute w-10 md:w-12 -top-8 right-12 animate-float-slow z-20 opacity-90 dark:opacity-75"
-    />
+      <!-- 🥬 Gambar -->
+      <div class="relative md:w-1/2 flex justify-center mt-10 md:mt-0 z-20">
+        <div
+          class="absolute bg-green-100 dark:bg-green-900/40 rounded-full w-72 h-72 md:w-96 md:h-96 top-0 md:top-8 transition-all duration-700 blur-sm"
+        ></div>
 
-    <img
-      src="assets/sayur.png"
-      alt="Sayur Sehat"
-      class="relative w-64 md:w-80 z-10 drop-shadow-xl animate-wiggle dark:drop-shadow-[0_0_25px_rgba(34,197,94,0.3)] transition-all duration-700"
-    />
+        <div
+          class="absolute -top-4 md:-top-6 left-1/2 transform -translate-x-1/2 bg-white dark:bg-gray-800/90 border-2 border-green-500 px-4 py-2 rounded-full shadow-md z-30 flex items-center gap-2 animate-fade-in backdrop-blur-sm transition-all duration-700"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5 text-green-600 dark:text-green-400"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 8c-2 0-4 2-4 4s2 4 4 4 4-2 4-4-2-4-4-4zm0 0V2m0 20v-6m0-10l-2-2m2 2l2-2"
+            />
+          </svg>
+          <span
+            class="text-green-700 dark:text-green-300 font-semibold text-sm md:text-base"
+          >
+            100% Fresh & Organic
+          </span>
+        </div>
 
-    <img
-      src="assets/buah.png"
-      alt="Buah Segar"
-      class="absolute w-32 md:w-40 top-10 right-10 animate-bounce-slow z-20"
-    />
+        <img
+          src="assets/daun.png"
+          alt="Daun Sehat"
+          class="absolute w-10 md:w-12 -top-8 right-12 animate-float-slow z-20 opacity-90 dark:opacity-75"
+        />
 
-    <div
-      class="absolute bottom-4 left-4 bg-white/90 dark:bg-gray-800/80 p-4 rounded-2xl shadow-md max-w-xs z-20 backdrop-blur-sm transition-all duration-700"
-    >
-      <p class="text-sm text-gray-700 dark:text-gray-200 italic">
-        “Makanan sehat, hidup lebih bugar. Yuk mulai dari sekarang!”
-      </p>
-    </div>
-  </div>
-</section>
+        <img
+          src="assets/sayur.png"
+          alt="Sayur Sehat"
+          class="relative w-64 md:w-80 z-10 drop-shadow-xl animate-wiggle dark:drop-shadow-[0_0_25px_rgba(34,197,94,0.3)] transition-all duration-700"
+        />
 
+        <img
+          src="assets/buah.png"
+          alt="Buah Segar"
+          class="absolute w-32 md:w-40 top-10 right-10 animate-bounce-slow z-20"
+        />
 
-
+        <div
+          class="absolute bottom-4 left-4 bg-white/90 dark:bg-gray-800/80 p-4 rounded-2xl shadow-md max-w-xs z-20 backdrop-blur-sm transition-all duration-700"
+        >
+          <p class="text-sm text-gray-700 dark:text-gray-200 italic">
+            “Makanan sehat, hidup lebih bugar. Yuk mulai dari sekarang!”
+          </p>
+        </div>
+      </div>
+    </section>
 
     <!-- 📘 SECTION: ARTIKEL -->
     <section id="artikel" class="min-h-screen bg-white py-20 px-6">
       <div class="container mx-auto">
-        <h2 class="text-3xl font-bold text-green-700 mb-6 text-center">
+        <h2
+          class="text-3xl font-bold text-green-700 mb-6 text-center dark:text-green-400 leading-tight"
+        >
           Artikel Edukasi Gizi
         </h2>
 
@@ -110,13 +119,12 @@
       </div>
     </section>
 
-     <!-- 🍽️ SECTION: CEK GIZI -->
-    <section
-      id="cekGizi"
-      class="mt-10 bg-green-50 py-10 transition-all duration-500"
-    >
+    <!-- 🍽️ SECTION: CEK GIZI -->
+    <section id="cekGizi" class="mt-10 py-10 transition-all duration-500">
       <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold text-green-700 mb-6">
+        <h2
+          class="text-3xl font-bold text-green-700 mb-6 dark:text-green-400 leading-tight"
+        >
           Cek Gizi dari Menu Harianmu
         </h2>
         <p class="text-gray-600 mb-4">
@@ -127,7 +135,7 @@
           id="menuInput"
           type="text"
           placeholder="Contoh: nasi goreng + teh manis + mie instan"
-          class="border rounded-lg p-3 w-full max-w-xl mb-4"
+          class="border rounded-lg p-3 w-full max-w-xl mb-4 placeholder:text-gray-400"
         />
 
         <button
@@ -142,7 +150,7 @@
           class="mt-6 text-left max-w-xl mx-auto bg-white rounded-xl p-6 shadow opacity-0 scale-95 hidden transition-all duration-500"
         >
           <div class="flex justify-between items-center mb-3">
-            <h3 class="font-bold text-lg text-green-700">
+            <h3 class="font-bold text-lg text-green-700 dark:text-green-400">
               Hasil Analisis Gizi
             </h3>
             <button
@@ -150,20 +158,22 @@
               class="text-red-500 hover:text-red-700 text-lg font-bold transition"
               title="Tutup hasil"
             >
-              ✖
+              x
             </button>
           </div>
 
-          <div id="detailGizi" class="text-gray-700 text-sm space-y-1"></div>
+          <div id="detailGizi" class="text-gray-600 text-sm space-y-1"></div>
           <hr class="my-3" />
-          <p id="penilaian" class="font-semibold text-gray-800"></p>
+          <p id="penilaian" class="font-semibold text-gray-600"></p>
         </div>
       </div>
     </section>
 
     <!-- 🍽️ SECTION: MAKANAN -->
     <section id="makanan" class="pt-24 p-8">
-      <h2 class="text-2xl font-bold text-green-700 mb-4">
+      <h2
+        class="text-2xl font-bold text-green-700 mb-4 dark:text-green-400 leading-tight"
+      >
         Daftar Makanan Bergizi
       </h2>
 
@@ -182,15 +192,17 @@
       ></div>
     </section>
 
-   
-
     <!-- ⚖️ SECTION: KALKULATOR -->
     <section
       id="kalkulator"
-      class="bg-green-50 py-16 px-6 transition-all duration-500"
+      class="bg-white py-16 px-6 transition-all duration-500"
     >
-      <div class="container mx-auto max-w-lg bg-white p-6 rounded-xl shadow-lg">
-        <h2 class="text-2xl font-bold text-green-700 mb-4 text-center">
+      <div
+        class="container mx-auto max-w-lg bg-white p-6 rounded-xl shadow-md dark:border border-green-200"
+      >
+        <h2
+          class="text-2xl font-bold text-green-700 mb-4 text-center dark:text-green-400 leading-tight"
+        >
           Kalkulator Kebutuhan Kalori
         </h2>
 
@@ -241,18 +253,20 @@
     </section>
     <!-- ❓ SECTION: QUIZ -->
 
-    <section id="quiz" class="p-8 bg-green-50">
-      <h2 class="text-2xl font-bold text-green-700 mb-6 text-center">
+    <section id="quiz" class="p-8">
+      <h2
+        class="text-2xl font-bold text-green-700 mb-6 text-center dark:text-green-400 leading-tight"
+      >
         Quiz Gizi 🍽️
       </h2>
 
       <div
         id="quizContainer"
-        class="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-md text-center"
+        class="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-md text-center dark:border border-green-200"
       >
         <h3
           id="pertanyaan"
-          class="text-lg font-semibold mb-4 text-gray-800"
+          class="text-lg font-semibold mb-4 text-gray-600"
         ></h3>
         <div id="pilihanContainer" class="space-y-3 mb-4"></div>
         <button
@@ -266,10 +280,14 @@
     </section>
 
     <!-- ℹ️ SECTION: TENTANG -->
-    <section id="tentang" class="min-h-screen bg-green-100 py-20 px-6">
-      <div class="container mx-auto text-center max-w-2xl">
-        <h2 class="text-3xl font-bold text-green-700 mb-4">Tentang EduMeal</h2>
-        <p class="text-gray-700">
+    <section id="tentang" class="min-h-screen bg-white py-20">
+      <div class="container mx-auto text-center max-w-2xl px-6">
+        <h2
+          class="text-3xl font-bold text-green-700 mb-4 dark:text-green-400 leading-tight"
+        >
+          Tentang EduMeal
+        </h2>
+        <p class="text-gray-600">
           EduMeal dibuat untuk membantu masyarakat memahami pentingnya gizi
           seimbang melalui pendekatan digital yang mudah digunakan.
         </p>
@@ -280,9 +298,7 @@
     <div data-include="partials/footer.html"></div>
 
     <!-- ⚙️ SCRIPT -->
-
     <script src="js/Kalkulator.js"></script>
-
     <script src="js/data.js"></script>
     <script src="js/makanan.js"></script>
     <script src="js/quizdata.js"></script>
@@ -291,7 +307,6 @@
     <script src="js/gizi.js"></script>
     <script src="js/include.js"></script>
     <script src="js/darkmode.js"></script>
-
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

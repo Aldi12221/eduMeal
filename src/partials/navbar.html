@@ -1,78 +1,116 @@
 <!DOCTYPE html>
 <html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduMeal | Navbar</title>
+    <link rel="stylesheet" href="../output.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EduMeal | Navbar</title>
-  <link rel="stylesheet" href="../output.css" />
+  <body class="bg-green-50">
+    <!-- Navbar -->
+    <nav
+      class="fixed top-0 left-0 w-full bg-white shadow-md z-50 transition-all duration-300"
+    >
+      <div
+        class="container mx-auto flex justify-between items-center py-4 px-6 md:px-12"
+      >
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <a href="index.html">
+            <img src="assets/EduMeal.png" alt="EduMeal Logo" width="100px" />
+          </a>
+        </div>
 
-</head>
+        <!-- Menu Desktop -->
+        <ul
+          class="hidden md:flex items-center space-x-8 font-medium text-gray-700"
+        >
+          <li>
+            <a href="#home" class="hover:text-green-600 transition">Beranda</a>
+          </li>
+          <li>
+            <a href="#artikel" class="hover:text-green-600 transition"
+              >Artikel</a
+            >
+          </li>
+          <li>
+            <a href="#kalkulator" class="hover:text-green-600 transition"
+              >Kalkulator</a
+            >
+          </li>
+          <li>
+            <a href="#makanan" class="hover:text-green-600 transition"
+              >Makanan</a
+            >
+          </li>
+          <li>
+            <a href="#quiz" class="hover:text-green-600 transition">Quiz</a>
+          </li>
+          <li>
+            <a href="#tentang" class="hover:text-green-600 transition"
+              >Tentang</a
+            >
+          </li>
+        </ul>
 
-<body class="bg-green-50">
-  <!-- Navbar -->
-  <nav class="fixed top-0 left-0 w-full bg-white shadow-md z-50 transition-all duration-300">
-    <div class="container mx-auto flex justify-between items-center py-4 px-6 md:px-12">
-      <!-- Logo -->
-      <div class="flex items-center space-x-2">
+        <!-- Tombol kanan -->
+        <div class="flex items-center space-x-4">
+          <!-- 🌙 Tombol Mode -->
+          <!-- 🌙/☀️ Tombol Toggle Mode -->
+          <button
+            id="modeToggle"
+            class="text-2xl focus:outline-none transition hover:scale-110"
+            title="Ganti mode terang/gelap"
+          >
+            🌙
+          </button>
 
-        <span class="text-green-700 font-extrabold text-xl">EduMeal</span>
+          <!-- Tombol Order (opsional, bisa ke kalkulator atau section makanan) -->
+          <a
+            href="#makanan"
+            class="hidden md:inline-block bg-green-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition"
+          >
+            <img src="assets/logo.png" alt="EduMeal Logo" class="w-8 h-8"
+          /></a>
+
+          <!-- Tombol Hamburger -->
+          <button
+            id="menu-btn"
+            class="md:hidden text-gray-700 focus:outline-none"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-7 h-7"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
 
-      <!-- Menu Desktop -->
-      <ul class="hidden md:flex items-center space-x-8 font-medium text-gray-700">
-        <li>
-          <a href="#home" class="hover:text-green-600 transition">Beranda</a>
-        </li>
-        <li>
-          <a href="#artikel" class="hover:text-green-600 transition">Artikel</a>
-        </li>
-        <li>
-          <a href="#kalkulator" class="hover:text-green-600 transition">Kalkulator</a>
-        </li>
-        <li>
-          <a href="#makanan" class="hover:text-green-600 transition">Makanan</a>
-        </li>
-        <li><a href="#quiz" class="hover:text-green-600 transition">Quiz</a></li>
-        <li>
-          <a href="#tentang" class="hover:text-green-600 transition">Tentang</a>
-        </li>
-      </ul>
-
-      <!-- Tombol kanan -->
-      <div class="flex items-center space-x-4">
-        <!-- 🌙 Tombol Mode -->
-        <!-- 🌙/☀️ Tombol Toggle Mode -->
-        <button id="modeToggle" class="text-2xl focus:outline-none transition hover:scale-110"
-          title="Ganti mode terang/gelap">
-          🌙
-        </button>
-
-        <!-- Tombol Order (opsional, bisa ke kalkulator atau section makanan) -->
-        <a href="#makanan"
-          class="hidden md:inline-block bg-green-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-700 transition">
-          <img src="assets/logo.png" alt="EduMeal Logo" class="w-8 h-8" /></a>
-
-        <!-- Tombol Hamburger -->
-        <button id="menu-btn" class="md:hidden text-gray-700 focus:outline-none">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button>
+      <!-- Menu Mobile -->
+      <div id="mobileMenu" class="hidden bg-green-50 border-t border-green-100">
+        <ul class="flex flex-col items-center space-y-4 py-4 text-gray-700">
+          <li><a href="#home" class="hover:text-green-600">Beranda</a></li>
+          <li><a href="#artikel" class="hover:text-green-600">Artikel</a></li>
+          <li>
+            <a href="#kalkulator" class="hover:text-green-600">Kalkulator</a>
+          </li>
+          <li><a href="#makanan" class="hover:text-green-600">Makanan</a></li>
+          <li><a href="#quiz" class="hover:text-green-600">Quiz</a></li>
+          <li><a href="#tentang" class="hover:text-green-600">Tentang</a></li>
+        </ul>
       </div>
-    </div>
-
-    <!-- Menu Mobile -->
-    <div id="mobileMenu" class="hidden bg-green-50 border-t border-green-100">
-      <ul class="flex flex-col items-center space-y-4 py-4 text-gray-700">
-        <li><a href="#home" class="hover:text-green-600">Beranda</a></li>
-        <li><a href="#artikel" class="hover:text-green-600">Artikel</a></li>
-        <li><a href="#kalkulator" class="hover:text-green-600">Kalkulator</a></li>
-        <li><a href="#makanan" class="hover:text-green-600">Makanan</a></li>
-        <li><a href="#quiz" class="hover:text-green-600">Quiz</a></li>
-        <li><a href="#tentang" class="hover:text-green-600">Tentang</a></li>
-      </ul>
-    </div>
-  </nav>
-  <script src="../js/darkmode.js"></script>
-</body>
+    </nav>
+    <script src="../js/darkmode.js"></script>
+  </body>
+</html>
