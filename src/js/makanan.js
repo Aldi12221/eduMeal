@@ -11,7 +11,7 @@
             <div class="bg-white border rounded-xl shadow-md hover:shadow-lg transition p-4">
               <img src="${m.gambar}" alt="${m.nama}" 
                    class="w-full h-40 object-cover rounded-lg mb-3">
-              <h3 class="text-xl font-semibold text-green-700 dark:text-green-400">${m.nama}</h3>
+              <h3 class="text-xl font-semibold text-green-700">${m.nama}</h3>
               <div class="mt-2 text-sm text-gray-700">
                 <p><strong>Kalori:</strong> ${m.kalori} kcal</p>
                 <p><strong>Protein:</strong> ${m.protein} g</p>
