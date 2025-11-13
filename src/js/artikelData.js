@@ -19,73 +19,75 @@ const container = document.getElementById("artikelContainer");
 const loadMoreBtn = document.getElementById("loadMoreBtn");
 
 let artikelTampil = 0;
-const ARTIKEL_PER_HALAMAN = 4;
+const ARTIKEL_PER_HALAMAN = 6;
 
 // Fungsi render artikel
 function renderArtikel() {
-  const sisa = artikelData.length - artikelTampil;
   const tampilSekarang = artikelData.slice(artikelTampil, artikelTampil + ARTIKEL_PER_HALAMAN);
 
   tampilSekarang.forEach((item) => {
     const card = document.createElement("div");
-    card.className =
-          "article-card bg-white dark:bg-gray-800 rounded-xl shadow-md overflow-hidden w-full sm:max-w-sm animate-fadeInUp flex flex-col";
-
+    card.className = `
+      article-card bg-white dark:bg-gray-800 rounded-xl shadow-md 
+      overflow-hidden w-full sm:max-w-sm transform transition-all duration-500
+      hover:-translate-y-2 hover:shadow-xl hover:shadow-green-300/30 
+      dark:hover:shadow-green-500/20 cursor-pointer group
+    `;
 
     card.innerHTML = `
-      <img src="${item.gambar}" alt="${item.judul}" class="w-full h-48 object-cover ">
-      <div class="p-4">
-        <h3 class="font-bold text-green-700 dark:text-green-400 mb-2">${item.judul}</h3>
-        <p class="text-gray-600 dark:text-gray-300 text-sm">${item.deskripsi}</p>
+      <div class="overflow-hidden">
+        <img 
+          src="${item.gambar}" 
+          alt="${item.judul}" 
+          class="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+      <div class="p-4 transition-all duration-500 group-hover:-translate-y-1">
+        <h3 class="font-bold text-green-700 dark:text-green-400 mb-2 text-lg">${item.judul}</h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">${item.deskripsi}</p>
       </div>
     `;
 
-
-
-
+    // Efek klik: SweetAlert
     card.addEventListener("click", () => {
       Swal.fire({
         title: item.judul,
         text: "Fitur detail artikel akan segera hadir 🚀",
         icon: "info",
-        confirmButtonColor: "#16a34a", // hijau
+        confirmButtonColor: "#16a34a",
         confirmButtonText: "Oke!",
         background: document.documentElement.classList.contains("dark")
-          ? "#1f2937" // dark background
-          : "#ffffff", // light background
+          ? "#1f2937"
+          : "#ffffff",
         color: document.documentElement.classList.contains("dark")
-          ? "#d1fae5" // teks warna hijau muda di dark mode
-          : "#166534", // teks hijau tua di light mode
+          ? "#d1fae5"
+          : "#166534",
       });
     });
+
     container.appendChild(card);
   });
 
   artikelTampil += tampilSekarang.length;
-  if (artikelTampil >= artikelData.length) {
-    loadMoreBtn.classList.add("hidden");
-  } else {
-    loadMoreBtn.classList.remove("hidden");
-  }
+  loadMoreBtn.classList.toggle("hidden", artikelTampil >= artikelData.length);
 }
 
 // Tombol “Lihat Lainnya”
-loadMoreBtn.addEventListener("click",()=>{
+loadMoreBtn.addEventListener("click", () => {
   Swal.fire({
-        title: "Coming Soon 🚀",
-        text: "Fitur detail artikel akan segera hadir!",
-        icon: "info",
-        confirmButtonColor: "#16a34a", // hijau
-        confirmButtonText: "Oke!",
-        background: document.documentElement.classList.contains("dark")
-          ? "#1f2937" // dark background
-          : "#ffffff", // light background
-        color: document.documentElement.classList.contains("dark")
-          ? "#d1fae5" // teks warna hijau muda di dark mode
-          : "#166534", // teks hijau tua di light mode
-      });
-    });
-
+    title: "Coming Soon 🚀",
+    text: "Fitur detail artikel akan segera hadir!",
+    icon: "info",
+    confirmButtonColor: "#16a34a",
+    confirmButtonText: "Oke!",
+    background: document.documentElement.classList.contains("dark")
+      ? "#1f2937"
+      : "#ffffff",
+    color: document.documentElement.classList.contains("dark")
+      ? "#d1fae5"
+      : "#166534",
+  });
+});
 
 // Jalankan pertama kali
 renderArtikel();

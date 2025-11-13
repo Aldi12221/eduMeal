@@ -126,3 +126,40 @@ html.dark .shadow-lg {
   animation: fadeInUp 0.5s ease forwards;
 }
 
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fadeUp {
+  animation: fadeUp 1s ease-out forwards;
+}
+.animate-fadeUpDelay {
+  opacity: 0;
+  animation: fadeUp 1s ease-out 0.3s forwards;
+}
+.animate-fadeUpDelay2 {
+  opacity: 0;
+  animation: fadeUp 1s ease-out 0.6s forwards;
+}
+.animate-fadeUpDelay3 {
+  opacity: 0;
+  animation: fadeUp 1s ease-out 0.9s forwards;
+}
+
+/* efek gambar yang sudah kamu pakai */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+.animate-float-slow { animation: float-slow 4s ease-in-out infinite; }
+
+
+
+
