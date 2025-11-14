@@ -1,12 +1,68 @@
 const makananBergizi = [
-  { nama: "Nasi Putih", gambar: "assets/makanan/nasi-putih.jpg", kalori: 175, protein: 3.5, lemak: 0.3, karbo: 40 },
-  { nama: "Telur Rebus", gambar: "assets/makanan/telur-rebus.jpg", kalori: 68, protein: 6, lemak: 4.5, karbo: 0.6 },
-  { nama: "Ayam Panggang", gambar: "assets/makanan/ayam-panggang.jpg", kalori: 165, protein: 31, lemak: 3.6, karbo: 0 },
-  { nama: "Tahu Goreng", gambar: "assets/makanan/tahu-goreng.jpg", kalori: 76, protein: 8, lemak: 4.6, karbo: 1.9 },
-  { nama: "Sayur Bayam", gambar: "assets/makanan/sayur-bayam.jpg", kalori: 23, protein: 2.9, lemak: 0.4, karbo: 3.6 },
-  { nama: "Sayur Bayam", gambar: "assets/makanan/sayur-bayam.jpg", kalori: 23, protein: 2.9, lemak: 0.4, karbo: 3.6 },
-  { nama: "Sayur Bayam", gambar: "assets/makanan/sayur-bayam.jpg", kalori: 23, protein: 2.9, lemak: 0.4, karbo: 3.6 },
-  { nama: "Sayur Bayam", gambar: "assets/makanan/sayur-bayam.jpg", kalori: 23, protein: 2.9, lemak: 0.4, karbo: 3.6 },
+  {
+    nama: "Nasi Putih",
+    gambar: "assets/makanan/nasi-putih.jpg",
+    kalori: 180,
+    protein: 3,
+    lemak: 0.9,
+    karbo: 40,
+  },
+  {
+    nama: "Telur Rebus",
+    gambar: "assets/makanan/telur-rebus.jpg",
+    kalori: 77,
+    protein: 6,
+    lemak: 5,
+    karbo: 1,
+  },
+  {
+    nama: "Ayam Panggang",
+    gambar: "assets/makanan/ayam-panggang.jpg",
+    kalori: 247,
+    protein: 32,
+    lemak: 15,
+    karbo: 0,
+  },
+  {
+    nama: "Tahu Goreng",
+    gambar: "assets/makanan/tahu-goreng.jpg",
+    kalori: 115,
+    protein: 9.7,
+    lemak: 8.5,
+    karbo: 2.5,
+  },
+  {
+    nama: "Tempe Goreng",
+    gambar: "assets/makanan/tempe-goreng.jpg",
+    kalori: 300,
+    protein: 20,
+    lemak: 15,
+    karbo: 12,
+  },
+  {
+    nama: "Sayur Bayam",
+    gambar: "assets/makanan/sayur-bayam.jpg",
+    kalori: 23,
+    protein: 3.5,
+    lemak: 0.4,
+    karbo: 3.6,
+  },
+  {
+    nama: "Sayur Sop",
+    gambar: "assets/makanan/sayur-sop.jpg",
+    kalori: 150,
+    protein: 5,
+    lemak: 3,
+    karbo: 20,
+  },
+  {
+    nama: "Susu",
+    gambar: "assets/makanan/susu.jpg",
+    kalori: 150,
+    protein: 8,
+    lemak: 8,
+    karbo: 12,
+  },
 ];
 
 const listMakanan = document.getElementById("listMakanan");
@@ -15,10 +71,10 @@ const input = document.getElementById("search");
 // 🔹 Fungsi menentukan rating kesehatan (warna & label)
 function getHealthRating(m) {
   let score = 0;
-  if (m.kalori < 150) score++;
-  if (m.lemak < 5) score++;
-  if (m.protein > 5) score++;
-  if (m.karbo < 30) score++;
+  if (m.kalori < 2000) score++;
+  if (m.lemak < 44) score++;
+  if (m.protein > 75) score++;
+  if (m.karbo < 325) score++;
 
   if (score >= 3) {
     return { color: "bg-green-500", label: "Sehat 👍" };
@@ -73,18 +129,28 @@ function renderData(filter = "") {
         Swal.fire({
           title: m.nama,
           html: `
-            <img src="${m.gambar}" alt="${m.nama}" class="w-40 mx-auto rounded-lg mb-3">
+            <img src="${m.gambar}" alt="${
+            m.nama
+          }" class="w-40 mx-auto rounded-lg mb-3">
             <p><b>Kalori:</b> ${m.kalori} kcal</p>
             <p><b>Protein:</b> ${m.protein} g</p>
             <p><b>Lemak:</b> ${m.lemak} g</p>
             <p><b>Karbo:</b> ${m.karbo} g</p>
             <hr class="my-2">
-            <p class="font-semibold ${rating.color === 'bg-green-500' ? 'text-green-500' : 'text-red-500'}">${rating.label}</p>
+            <p class="font-semibold ${
+              rating.color === "bg-green-500"
+                ? "text-green-500"
+                : "text-red-500"
+            }">${rating.label}</p>
             <p class="text-sm text-gray-500 mt-2">Fitur detail makanan akan segera hadir 🚀</p>
           `,
           confirmButtonColor: "#16a34a",
-          background: document.documentElement.classList.contains("dark") ? "#1f2937" : "#ffffff",
-          color: document.documentElement.classList.contains("dark") ? "#d1fae5" : "#166534",
+          background: document.documentElement.classList.contains("dark")
+            ? "#1f2937"
+            : "#ffffff",
+          color: document.documentElement.classList.contains("dark")
+            ? "#d1fae5"
+            : "#166534",
         });
       });
 
