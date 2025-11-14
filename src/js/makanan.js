@@ -71,7 +71,7 @@ const input = document.getElementById("search");
 // 🔹 Fungsi menentukan rating kesehatan (warna & label)
 function getHealthRating(m) {
   let score = 0;
-  if (m.kalori < 2000) score++;
+  if (m.kalori < 200) score++;
   if (m.lemak < 44) score++;
   if (m.protein > 75) score++;
   if (m.karbo < 325) score++;
