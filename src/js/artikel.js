@@ -168,3 +168,4 @@ artikelModal.addEventListener("click", (e) => {
 // JALANKAN PERTAMA KALI
 // ===================================================================
 renderArtikel();
+  
