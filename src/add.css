@@ -161,5 +161,17 @@ html.dark .shadow-lg {
 .animate-float-slow { animation: float-slow 4s ease-in-out infinite; }
 
 
+/* untuk mencegah scroll */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
 
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none;    /* Firefox */
+}
 
