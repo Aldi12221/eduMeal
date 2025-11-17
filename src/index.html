@@ -14,28 +14,20 @@
     </style>
   </head>
 
-  <body class="font-sans bg-green-50">
+  <body
+    class="font-sans relative overflow-x-hidden bg-gradient-to-b from-green-100 via-green-200 to-green-700 dark:bg-gradient-to-b dark:from-green-900 dark:via-gray-900 dark:to-black transition-all duration-700"
+  >
     <!-- 🔝 NAVBAR FIXED -->
     <div data-include="partials/navbar.html"></div>
 
     <section
       id="home"
-      class="relative min-h-screen flex flex-col md:flex-row items-center justify-between overflow-hidden px-8 md:px-16 pt-24 transition-colors duration-700"
+      class="relative min-h-screen flex flex-col md:flex-row items-center justify-between overflow-hidden px-8 md:px-16 pt-24 bg-transparent"
     >
-      <!-- 🌤 Background Light -->
-      <div
-        class="absolute inset-0 bg-gradient-to-br from-green-100 to-green-200 transition-all duration-700 dark:hidden"
-      ></div>
-
-      <!-- 🌙 Background Dark -->
-      <div
-        class="absolute inset-0 hidden dark:block bg-gradient-to-br from-green-900 to-gray-900 transition-all duration-700"
-      ></div>
-
       <!-- Overlay (aktif hanya di dark mode untuk efek lembut) -->
-      <div
+      <!-- <div
         class="absolute inset-0 bg-black/0 dark:bg-black/30 backdrop-blur-sm transition-all duration-700"
-      ></div>
+      ></div> -->
 
       <!-- 💬 Konten -->
       <div class="md:w-1/2 space-y-6 text-center md:text-left relative z-20">
@@ -138,84 +130,86 @@
         </div>
       </div>
     </section>
-<!--artikel section-->
-   <section
-  id="artikel"
-  class="min-h-screen py-10 px-6 
-         bg-gradient-to-b from-green-50 via-white to-green-100
-         dark:from-green-950 dark:via-gray-900 dark:to-black
-         transition-all duration-700"
->
-  <div class="container mx-auto">
-    <!-- Judul -->
-    <h2
-      class="text-3xl font-bold text-green-700 dark:text-green-400 mb-10 text-center leading-tight"
-    >
-      Artikel Edukasi Gizi
-    </h2>
+    <!--artikel section-->
+    <section id="artikel" class="min-h-screen py-10 px-6 bg-transparent">
+      <div class="container mx-auto">
+        <!-- Judul -->
+        <h2
+          class="text-3xl font-bold text-green-700 dark:text-green-400 mb-10 text-center leading-tight"
+        >
+          Artikel Edukasi Gizi
+        </h2>
 
-    <!-- Grid Artikel -->
+        <!-- Grid Artikel -->
+        <div
+          id="artikelContainer"
+          class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center"
+        ></div>
+
+        <!-- Tombol Lihat Lainnya -->
+        <div class="text-center mt-12">
+          <button
+            id="loadMoreBtn"
+            class="hidden bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg"
+          >
+            Lihat Lainnya ⬇️
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal Detail Artikel -->
     <div
-      id="artikelContainer"
-      class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-8 place-items-center"
-    ></div>
-
-    <!-- Tombol Lihat Lainnya -->
-    <div class="text-center mt-12">
-      <button
-        id="loadMoreBtn"
-        class="hidden bg-green-600 hover:bg-green-700 text-white px-8 py-3 rounded-lg shadow-md 
-       transition-all duration-300 hover:scale-105 hover:shadow-lg"
+      id="artikelModal"
+      class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden items-center justify-center z-50 transition"
+    >
+      <!-- wrapper modal yang kini scroll -->
+      <div
+        class="bg-white dark:bg-gray-800 rounded-xl shadow-xl max-w-2xl w-full mx-4 p-6 relative animate-[fadeIn_0.3s] max-h-[90vh] overflow-y-auto no-scrollbar"
       >
-        Lihat Lainnya ⬇️
-      </button>
+        <!-- Tombol Close -->
+        <button
+          id="closeModal"
+          class="sticky top-0 right-0 float-right text-gray-500 hover:text-red-500 text-xl bg-white dark:bg-gray-800 p-1 rounded"
+        >
+          ✕
+        </button>
+
+        <!-- Gambar Artikel -->
+        <img
+          id="modalGambar"
+          class="w-full h-56 object-cover rounded-lg mb-4"
+        />
+
+        <!-- Judul -->
+        <h2
+          id="modalJudul"
+          class="text-2xl font-bold text-green-700 dark:text-green-400 mb-2 leading-tight"
+        ></h2>
+
+        <!-- Penulis & Waktu -->
+        <div
+          class="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-300 mb-4"
+        >
+          <span id="modalPenulis" class="font-medium"></span>
+          <span>•</span>
+          <span id="modalJam"></span>
+        </div>
+
+        <!-- Isi Artikel -->
+        <p
+          id="modalIsi"
+          class="text-gray-700 dark:text-gray-200 leading-relaxed text-sm mb-4"
+        ></p>
+      </div>
     </div>
-  </div>
-</section>
-
-<!-- Modal Detail Artikel -->
-<div id="artikelModal" 
-  class="fixed inset-0 bg-black/50 backdrop-blur-sm hidden 
-         items-center justify-center z-50 transition">
-
-  <!-- wrapper modal yang kini scroll -->
-  <div class="bg-white dark:bg-gray-800 rounded-xl shadow-xl max-w-2xl w-full mx-4 p-6 relative 
-              animate-[fadeIn_0.3s] max-h-[90vh] overflow-y-auto no-scrollbar">
-
-    <!-- Tombol Close -->
-    <button id="closeModal"
-      class="sticky top-0 right-0 float-right text-gray-500 hover:text-red-500 text-xl bg-white dark:bg-gray-800 p-1 rounded">
-      ✕
-    </button>
-
-    <!-- Gambar Artikel -->
-    <img id="modalGambar" class="w-full h-56 object-cover rounded-lg mb-4" />
-
-    <!-- Judul -->
-    <h2 id="modalJudul"
-      class="text-2xl font-bold text-green-700 dark:text-green-400 mb-2 leading-tight"></h2>
-
-    <!-- Penulis & Waktu -->
-    <div class="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-300 mb-4">
-      <span id="modalPenulis" class="font-medium"></span>
-      <span>•</span>
-      <span id="modalJam"></span>
-    </div>
-
-    <!-- Isi Artikel -->
-    <p id="modalIsi"
-      class="text-gray-700 dark:text-gray-200 leading-relaxed text-sm mb-4"></p>
-
-  </div>
-</div>
-
-
-
-
-
 
     <!-- 🍽️ SECTION: CEK GIZI -->
-    <section id="cekGizi" class="mt-10 py-10 transition-all duration-500"  data-aos="fade-up">
+    <section
+      id="cekGizi"
+      class="mt-10 py-10 transition-all duration-500"
+      data-aos="fade-up"
+    >
       <div class="container mx-auto text-center">
         <h2
           class="text-3xl font-bold text-green-700 mb-6 dark:text-green-400 leading-tight"
@@ -265,45 +259,41 @@
     </section>
 
     <!-- 🍽️ SECTION: MAKANAN -->
-<section id="makanan" class="pt-10 p-8 bg-white dark:bg-gray-900 transition-colors duration-500">
-  <div class="max-w-6xl mx-auto">
-    <!-- Judul -->
-    <h2
-      class="text-3xl font-bold text-green-700 mb-6 dark:text-green-400 text-center leading-tight"
-    >
-      Daftar Makanan Bergizi
-    </h2>
+    <section id="makanan" class="pt-10 p-8 bg-transparent">
+      <div class="max-w-6xl mx-auto">
+        <!-- Judul -->
+        <h2
+          class="text-3xl font-bold text-green-700 mb-6 dark:text-green-400 text-center leading-tight"
+        >
+          Daftar Makanan Bergizi
+        </h2>
 
-    <!-- Search Bar -->
-    <div class="flex justify-center mb-8 ">
-      <input
-        id="search"
-        type="text"
-        placeholder="Cari makanan..."
-        class="w-full max-w-md px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-400 focus:outline-none dark:bg-gray-800 dark:text-white dark:border-gray-600 transition-all"
-      />
-    </div>
+        <!-- Search Bar -->
+        <div class="flex justify-center mb-8">
+          <input
+            id="search"
+            type="text"
+            placeholder="Cari makanan..."
+            class="w-full max-w-md px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:ring-2 focus:ring-green-400 focus:outline-none dark:bg-gray-800 dark:text-white dark:border-gray-600 transition-all"
+          />
+        </div>
 
-    <!-- Grid Card -->
-    <div
-      id="listMakanan"
-      class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
-    ></div>
-  </div>
-</section>
+        <!-- Grid Card -->
+        <div
+          id="listMakanan"
+          class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+        ></div>
+      </div>
+    </section>
 
-<!-- Script JS -->
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-
+    <!-- Script JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <!-- ⚖️ SECTION: KALKULATOR -->
-    <section
-      id="kalkulator"
-      class="bg-white py-16 px-6 transition-all duration-500"
-    >
+    <section id="kalkulator" class="py-16 px-6 bg-transparent">
       <div
-        class="container mx-auto max-w-lg bg-white p-6 rounded-xl shadow-md dark:border border-green-200" data-aos="fade-up"
+        class="container mx-auto max-w-lg bg-white p-6 rounded-xl shadow-md dark:border border-green-200"
+        data-aos="fade-up"
       >
         <h2
           class="text-2xl font-bold text-green-700 mb-4 text-center dark:text-green-400 leading-tight"
@@ -356,98 +346,179 @@
         <p id="hasil" class="text-center mt-4 font-semibold text-green-700"></p>
       </div>
     </section>
-    <section id="quiz" class="p-8">
-  <div id="quizContainer" class="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-md text-center">
-    <!-- Progress bar -->
-    <div class="relative w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 mb-4">
+    <section id="quiz" class="p-8 bg-transparent">
       <div
-        id="progressBar"
-        class="absolute top-0 left-0 h-3 bg-green-500 rounded-full transition-all duration-300"
-        style="width: 0%;"
+        id="quizContainer"
+        class="max-w-xl mx-auto bg-white p-6 rounded-2xl shadow-md text-center"
+      >
+        <h2
+          class="text-2xl font-bold text-green-700 mb-4 text-center dark:text-green-400 leading-tight"
+        >
+          Quiz Edukasi Gizi
+        </h2>
+        <!-- Progress bar -->
+        <div
+          class="relative w-full bg-gray-200 dark:bg-gray-700 rounded-full h-3 mb-4"
+        >
+          <div
+            id="progressBar"
+            class="absolute top-0 left-0 h-3 bg-green-500 rounded-full transition-all duration-300"
+            style="width: 0%"
+          ></div>
+        </div>
+
+        <h3
+          id="pertanyaan"
+          class="text-lg font-semibold mb-4 text-gray-600"
+        ></h3>
+        <div id="pilihanContainer" class="space-y-3 mb-4"></div>
+        <button
+          id="nextBtn"
+          class="hidden bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition"
+        >
+          Soal Berikutnya →
+        </button>
+        <p id="jawaban" class="mt-4 text-lg font-semibold"></p>
+      </div>
+    </section>
+
+    <section
+      id="tentang"
+      class="relative py-20 bg-transparent"
+      data-aos="fade-up"
+    >
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
+        <h2
+          class="text-4xl md:text-5xl font-extrabold text-green-700 dark:text-green-400 mb-6"
+        >
+          Tentang EduMeal
+        </h2>
+        <p
+          class="max-w-3xl mx-auto text-lg text-gray-700 dark:text-gray-300 leading-relaxed"
+        >
+          EduMeal adalah platform edukasi gizi cerdas yang membantu pengguna
+          memahami pentingnya pola makan seimbang. Kami percaya bahwa setiap
+          orang berhak mendapatkan informasi gizi yang akurat dan mudah
+          dipahami.
+        </p>
+
+        <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div
+            class="group bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 cursor-default"
+          >
+            <div
+              class="flex items-center justify-center w-14 h-14 mx-auto mb-5 rounded-full bg-green-100 dark:bg-green-900/30 group-hover:scale-110 transition-transform duration-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-8 h-8 text-green-600 dark:text-green-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="M12 4v16m8-8H4"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2"
+            >
+              Edukasi Gizi Seimbang
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+              Menyediakan informasi tentang pentingnya gizi seimbang melalui
+              data yang mudah dipahami oleh semua kalangan.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="group bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 cursor-default"
+          >
+            <div
+              class="flex items-center justify-center w-14 h-14 mx-auto mb-5 rounded-full bg-green-100 dark:bg-green-900/30 group-hover:scale-110 transition-transform duration-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-8 h-8 text-green-600 dark:text-green-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2"
+            >
+              Rekomendasi Makanan Sehat
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+              Memberikan saran makanan yang sesuai kebutuhan kalori dan kondisi
+              kesehatan pengguna.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="group bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 cursor-default"
+          >
+            <div
+              class="flex items-center justify-center w-14 h-14 mx-auto mb-5 rounded-full bg-green-100 dark:bg-green-900/30 group-hover:scale-110 transition-transform duration-500"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-8 h-8 text-green-600 dark:text-green-400"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="1.8"
+                  d="M5 13l4 4L19 7"
+                />
+              </svg>
+            </div>
+            <h3
+              class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2"
+            >
+              Data dan Fakta Gizi Akurat
+            </h3>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+              Informasi berbasis penelitian terbaru dan sumber terpercaya di
+              bidang kesehatan dan nutrisi.
+            </p>
+          </div>
+        </div>
+
+        <!-- CTA kecil di bawah -->
+        <div class="mt-16">
+          <a
+            href="#makanan"
+            class="inline-block px-8 py-3 bg-green-600 text-white font-semibold rounded-full shadow-md hover:bg-green-700 dark:hover:bg-green-500 transition-all duration-300"
+          >
+            Jelajahi Rekomendasi Makanan
+          </a>
+        </div>
+      </div>
+
+      <!-- Efek latar belakang lembut -->
+      <div
+        class="absolute inset-0 -z-10 opacity-30 dark:opacity-10 bg-gradient-to-r from-green-200 via-transparent to-green-100 dark:from-green-900 dark:to-transparent blur-3xl"
       ></div>
-    </div>
-
-    <h3 id="pertanyaan" class="text-lg font-semibold mb-4 text-gray-600"></h3>
-    <div id="pilihanContainer" class="space-y-3 mb-4"></div>
-    <button id="nextBtn" class="hidden bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition">
-      Soal Berikutnya →
-    </button>
-    <p id="jawaban" class="mt-4 text-lg font-semibold"></p>
-  </div>
-</section>
-
-
-
-
-    <section id="tentang" class="relative bg-gradient-to-b from-green-50 to-white dark:from-gray-900 dark:to-gray-950 py-20 overflow-hidden">
-  <div class="max-w-6xl mx-auto px-6 lg:px-8 text-center">
-    <h2 class="text-4xl md:text-5xl font-extrabold text-green-700 dark:text-green-400 mb-6">
-      Tentang EduMeal
-    </h2>
-    <p class="max-w-3xl mx-auto text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-      EduMeal adalah platform edukasi gizi cerdas yang membantu pengguna memahami pentingnya pola makan seimbang.
-      Kami percaya bahwa setiap orang berhak mendapatkan informasi gizi yang akurat dan mudah dipahami.
-    </p>
-
-    <div class="mt-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Card 1 -->
-      <div class="group bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 cursor-default">
-        <div class="flex items-center justify-center w-14 h-14 mx-auto mb-5 rounded-full bg-green-100 dark:bg-green-900/30 group-hover:scale-110 transition-transform duration-500">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 4v16m8-8H4" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
-          Edukasi Gizi Seimbang
-        </h3>
-        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-          Menyediakan informasi tentang pentingnya gizi seimbang melalui data yang mudah dipahami oleh semua kalangan.
-        </p>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="group bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 cursor-default">
-        <div class="flex items-center justify-center w-14 h-14 mx-auto mb-5 rounded-full bg-green-100 dark:bg-green-900/30 group-hover:scale-110 transition-transform duration-500">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
-          Rekomendasi Makanan Sehat
-        </h3>
-        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-          Memberikan saran makanan yang sesuai kebutuhan kalori dan kondisi kesehatan pengguna.
-        </p>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="group bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 cursor-default">
-        <div class="flex items-center justify-center w-14 h-14 mx-auto mb-5 rounded-full bg-green-100 dark:bg-green-900/30 group-hover:scale-110 transition-transform duration-500">
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8 text-green-600 dark:text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <h3 class="text-xl font-semibold text-gray-800 dark:text-gray-100 mb-2">
-          Data dan Fakta Gizi Akurat
-        </h3>
-        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
-          Informasi berbasis penelitian terbaru dan sumber terpercaya di bidang kesehatan dan nutrisi.
-        </p>
-      </div>
-    </div>
-
-    <!-- CTA kecil di bawah -->
-    <div class="mt-16">
-      <a href="#makanan" class="inline-block px-8 py-3 bg-green-600 text-white font-semibold rounded-full shadow-md hover:bg-green-700 dark:hover:bg-green-500 transition-all duration-300">
-        Jelajahi Rekomendasi Makanan
-      </a>
-    </div>
-  </div>
-
-  <!-- Efek latar belakang lembut -->
-  <div class="absolute inset-0 -z-10 opacity-30 dark:opacity-10 bg-gradient-to-r from-green-200 via-transparent to-green-100 dark:from-green-900 dark:to-transparent blur-3xl"></div>
-</section>
-
+    </section>
 
     <!-- ⚓ FOOTER -->
     <div data-include="partials/footer.html"></div>
