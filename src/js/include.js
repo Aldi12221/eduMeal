@@ -1,4 +1,7 @@
+
 async function includeHTML() {
+
+
   const elements = document.querySelectorAll('[data-include]');
   for (const el of elements) {
     const file = el.getAttribute('data-include');
@@ -14,25 +17,24 @@ async function includeHTML() {
     }
   }
   
-  // Initialize navbar toggle after all includes are loaded
+  
   const navbarElement = document.querySelector('[data-include*="navbar"]');
   if (navbarElement && navbarElement.innerHTML.includes('modeToggle')) {
     initNavbarToggle();
-    // Initialize dark mode after navbar is included
+    
     if (typeof initDarkMode === 'function') {
-      // Delay slightly to ensure DOM is fully updated
+     
       setTimeout(initDarkMode, 50);
     }
   }
 }
 document.addEventListener("DOMContentLoaded", includeHTML);
 
-// 🧩 Fungsi toggle menu dipisahkan
 function initNavbarToggle() {
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobileMenu');
 
-  if (!menuBtn || !mobileMenu) return; // pastikan elemen ditemuk
+  if (!menuBtn || !mobileMenu) return; 
 
   menuBtn.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');

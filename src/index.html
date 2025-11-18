@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="output.css" />
     <style>
       html {
-        scroll-behavior: smooth; /* agar scroll halus */
+        scroll-behavior: smooth; 
       }
     </style>
   </head>
@@ -24,11 +24,6 @@
       id="home"
       class="relative min-h-screen flex flex-col md:flex-row items-center justify-between overflow-hidden px-8 md:px-16 pt-24 bg-transparent"
     >
-      <!-- Overlay (aktif hanya di dark mode untuk efek lembut) -->
-      <!-- <div
-        class="absolute inset-0 bg-black/0 dark:bg-black/30 backdrop-blur-sm transition-all duration-700"
-      ></div> -->
-
       <!-- 💬 Konten -->
       <div class="md:w-1/2 space-y-6 text-center md:text-left relative z-20">
         <h1
@@ -80,22 +75,9 @@
         ></div>
 
         <div
-          class="absolute -top-4 md:-top-6 left-1/2 transform -translate-x-1/2 bg-white dark:bg-gray-800/90 border-2 border-green-500 px-4 py-2 rounded-full shadow-md z-30 flex items-center gap-2 animate-fade-in backdrop-blur-sm transition-all duration-700"
+          class="absolute top-4 md:-top-6 left-1/2 transform-translate-x-1/2 bg-white dark:bg-gray-800/90 border-2 border-green-500 px-4 py-2 rounded-full shadow-md z-30 flex items-center gap-2 animate-fade-in backdrop-blur-sm transition-all duration-700"
         >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-5 h-5 text-green-600 dark:text-green-400"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M12 8c-2 0-4 2-4 4s2 4 4 4 4-2 4-4-2-4-4-4zm0 0V2m0 20v-6m0-10l-2-2m2 2l2-2"
-            />
-          </svg>
+          
           <span
             class="text-green-700 dark:text-green-300 font-semibold text-sm md:text-base"
           >
@@ -106,7 +88,7 @@
         <img
           src="assets/daun.png"
           alt="Daun Sehat"
-          class="absolute w-10 md:w-12 -top-8 right-12 animate-float-slow z-20 opacity-90 dark:opacity-75"
+          class="absolute w-10 md:w-12 top-8 right-12 animate-float-slow z-20 opacity-90 dark:opacity-75 "
         />
 
         <img
@@ -525,7 +507,6 @@
 
     <!-- ⚙️ SCRIPT -->
     <script src="js/Kalkulator.js"></script>
-
     <script src="js/makanan.js"></script>
     <script src="js/quizdata.js"></script>
     <script src="js/quiz.js"></script>

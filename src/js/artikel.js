@@ -1,10 +1,8 @@
-// ===================================================================
-// ELEMENT
-// ===================================================================
+
 const container = document.getElementById("artikelContainer");
 const loadMoreBtn = document.getElementById("loadMoreBtn");
 
-// Modal
+
 const artikelModal = document.getElementById("artikelModal");
 const modalJudul = document.getElementById("modalJudul");
 const modalIsi = document.getElementById("modalIsi");
@@ -16,12 +14,10 @@ const modalJam = document.getElementById("modalJam");
 let artikelTampil = 0;
 const ARTIKEL_PER_HALAMAN = 6;
 
-let scrollY = 0; // posisi scroll sebelum modal dibuka
+let scrollY = 0; 
+  
 
 
-// ===================================================================
-// RENDER ARTIKEL
-// ===================================================================
 function renderArtikel() {
   const tampilSekarang = artikelData.slice(
     artikelTampil,
@@ -76,9 +72,6 @@ function renderArtikel() {
 }
 
 
-// ===================================================================
-// LOAD MORE — SweetAlert
-// ===================================================================
 loadMoreBtn.addEventListener("click", () => {
   Swal.fire({
     title: "Coming Soon 🚀",
@@ -96,9 +89,7 @@ loadMoreBtn.addEventListener("click", () => {
 });
 
 
-// ===================================================================
-// MODAL DETAIL
-// ===================================================================
+
 function bukaDetailArtikel(data) {
   modalJudul.textContent = data.judul;
   modalGambar.src = data.gambar;
@@ -106,7 +97,7 @@ function bukaDetailArtikel(data) {
   modalPenulis.textContent = data.penulis || "Admin";
   modalJam.textContent = data.jam || "Baru saja";
 
-  // Paragraf otomatis
+  
   if (data.full) {
     const paragraphs = data.full
       .trim()
@@ -119,9 +110,7 @@ function bukaDetailArtikel(data) {
     modalIsi.innerHTML = `<p>${data.deskripsi}</p>`;
   }
 
-  // ================================================================
-  // LOCK SCROLL TANPA NAIK KE ATAS
-  // ================================================================
+  
   scrollY = window.scrollY;
 
   document.body.style.position = "fixed";
@@ -130,22 +119,18 @@ function bukaDetailArtikel(data) {
   document.body.style.right = "0";
   document.body.style.width = "100%";
 
-  // Tampilkan modal
+  
   artikelModal.classList.remove("hidden");
   artikelModal.classList.add("flex");
 }
 
 
-// ===================================================================
-// TUTUP MODAL
-// ===================================================================
+
 function closeModalFunc() {
   artikelModal.classList.add("hidden");
   artikelModal.classList.remove("flex");
 
-  // ================================================================
-  // KEMBALIKAN SCROLL KE POSISI TERAKHIR
-  // ================================================================
+  
   document.body.style.position = "";
   document.body.style.top = "";
   document.body.style.left = "";
@@ -163,9 +148,5 @@ artikelModal.addEventListener("click", (e) => {
   }
 });
 
-
-// ===================================================================
-// JALANKAN PERTAMA KALI
-// ===================================================================
 renderArtikel();
   
