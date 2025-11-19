@@ -1,7 +1,7 @@
 [
   {
     "nama": "Pecel Sayur Madiun (Sehat)",
-    "gambar": "placeholder_pecel_sehat.jpg",
+    "gambar": "assets/makanan/pecel-sayur.png",
     "kalori": 330,
     "protein": 15,
     "lemak": 12,
@@ -9,7 +9,7 @@
   },
   {
     "nama": "Soto Lamongan (Kuah Bening)",
-    "gambar": "placeholder_soto_bening.jpg",
+    "gambar": "assets/makanan/soto-lamongan.png",
     "kalori": 250,
     "protein": 28,
     "lemak": 10,
@@ -17,7 +17,7 @@
   },
   {
     "nama": "Tahu Tek Kukus (Bumbu Kacang Tipis)",
-    "gambar": "placeholder_tahu_tek_kukus.jpg",
+    "gambar": "assets/makanan/tahu-tek-kukus.png",
     "kalori": 300,
     "protein": 20,
     "lemak": 10,
@@ -25,7 +25,7 @@
   },
   {
     "nama": "Rawon Daging Sapi (Tanpa Santan)",
-    "gambar": "placeholder_rawon_lean.jpg",
+    "gambar": "assets/makanan/rawon-daging-sapi.png",
     "kalori": 340,
     "protein": 25,
     "lemak": 20,
@@ -33,7 +33,7 @@
   },
   {
     "nama": "Sate Ayam Madura (Panggang)",
-    "gambar": "placeholder_sate_panggang.jpg",
+    "gambar": "assets/makanan/sate-ayam-madura.png",
     "kalori": 320,
     "protein": 35,
     "lemak": 15,
@@ -41,7 +41,7 @@
   },
   {
     "nama": "Bakso Malang (Daging Murni)",
-    "gambar": "placeholder_bakso_daging.jpg",
+    "gambar": "assets/makanan/bakso-malang.png",
     "kalori": 290,
     "protein": 25,
     "lemak": 12,
@@ -49,7 +49,7 @@
   },
   {
     "nama": "Rujak Cingur (Sayur Dominan)",
-    "gambar": "placeholder_rujak_sayur.jpg",
+    "gambar": "assets/makanan/rujak-cingur.png",
     "kalori": 280,
     "protein": 10,
     "lemak": 10,
@@ -57,7 +57,7 @@
   },
   {
     "nama": "Gado-Gado/Lotek (Kontrol Karbo)",
-    "gambar": "placeholder_gado_kontrol.jpg",
+    "gambar": "assets/makanan/gado-gado.png",
     "kalori": 380,
     "protein": 18,
     "lemak": 20,
@@ -65,7 +65,7 @@
   },
   {
     "nama": "Nasi Krawu (Daging Tanpa Lemak)",
-    "gambar": "placeholder_nasi_krawu_lean.jpg",
+    "gambar": "assets/makanan/nasi-krawu.png",
     "kalori": 450,
     "protein": 25,
     "lemak": 25,
@@ -73,7 +73,7 @@
   },
   {
     "nama": "Lontong Sayur Surabaya (Santan Rendah Lemak)",
-    "gambar": "placeholder_lontong_sayur_lite.jpg",
+    "gambar": "assets/makanan/lontong-sayur.png",
     "kalori": 360,
     "protein": 15,
     "lemak": 18,
@@ -83,7 +83,7 @@
   
   {
     "nama": "Sup Ayam Jagung",
-    "gambar": "placeholder_sup_ayam_jagung.jpg",
+    "gambar": "assets/makanan/sup-ayam-jagung.png",
     "kalori": 200,
     "protein": 15,
     "lemak": 5,
@@ -91,7 +91,7 @@
   },
   {
     "nama": "Capcay Kuah (Full Sayur)",
-    "gambar": "placeholder_capcay_kuah.jpg",
+    "gambar": "assets/makanan/capcay-kuah.png",
     "kalori": 180,
     "protein": 8,
     "lemak": 4,
@@ -99,7 +99,7 @@
   },
   {
     "nama": "Tumis Brokoli Udang",
-    "gambar": "placeholder_tumis_brokoli_udang.jpg",
+    "gambar": "assets/makanan/tumis-brokoli-udang.png",
     "kalori": 220,
     "protein": 20,
     "lemak": 8,
@@ -107,7 +107,7 @@
   },
   {
     "nama": "Pepes Ikan Nila",
-    "gambar": "placeholder_pepes_ikan_nila.jpg",
+    "gambar": "assets/makanan/pepes-ikan-nila.png",
     "kalori": 160,
     "protein": 25,
     "lemak": 5,
@@ -115,7 +115,7 @@
   },
   {
     "nama": "Ayam Panggang Bumbu Kuning",
-    "gambar": "placeholder_ayam_bumbu_kuning.jpg",
+    "gambar": "assets/makanan/ayam-panggang-bumbu-kuning.png",
     "kalori": 280,
     "protein": 30,
     "lemak": 10,
@@ -123,7 +123,7 @@
   },
   {
     "nama": "Sayur Bening Bayam dan Labu",
-    "gambar": "placeholder_sayur_bayam_labu.jpg",
+    "gambar": "assets/makanan/sayur-bening-bayam-dan-labu.png",
     "kalori": 100,
     "protein": 5,
     "lemak": 1,
@@ -131,7 +131,7 @@
   },
   {
     "nama": "Nasi Merah Salmon Panggang",
-    "gambar": "placeholder_salmon_panggang.jpg",
+    "gambar": "assets/makanan/nasi-merah-salmon-panggang.png",
     "kalori": 400,
     "protein": 35,
     "lemak": 20,
@@ -139,7 +139,7 @@
   },
   {
     "nama": "Telur Rebus dan Ubi Cilembu",
-    "gambar": "placeholder_telur_ubi.jpg",
+    "gambar": "assets/makanan/telur-rebus-dan-ubi-cilembu.png",
     "kalori": 230,
     "protein": 15,
     "lemak": 8,
@@ -147,7 +147,7 @@
   },
   {
     "nama": "Salad Ayam Caesar (Dressing Rendah Lemak)",
-    "gambar": "placeholder_salad_caesar_lite.jpg",
+    "gambar": "assets/makanan/salad-ayam-caesar.png",
     "kalori": 310,
     "protein": 25,
     "lemak": 15,
@@ -155,7 +155,7 @@
   },
   {
     "nama": "Bubur Kacang Hijau (Tanpa Santan)",
-    "gambar": "placeholder_bubur_kacang_lite.jpg",
+    "gambar": "assets/makanan/bubur-kacang-hijau.png",
     "kalori": 250,
     "protein": 12,
     "lemak": 3,
@@ -163,7 +163,7 @@
   },
   {
     "nama": "Smoothie Buah Naga Protein",
-    "gambar": "placeholder_smoothie_naga.jpg",
+    "gambar": "assets/makanan/smoothies-buah-naga.png",
     "kalori": 210,
     "protein": 18,
     "lemak": 2,
@@ -171,7 +171,7 @@
   },
   {
     "nama": "Ikan Patin Kuah Kuning",
-    "gambar": "placeholder_ikan_patin_kuah.jpg",
+    "gambar": "assets/makanan/ikan-patin-kuah-kuning.png",
     "kalori": 270,
     "protein": 30,
     "lemak": 10,
@@ -179,7 +179,7 @@
   },
   {
     "nama": "Tongseng Ayam Tanpa Santan",
-    "gambar": "placeholder_tongseng_ayam_lite.jpg",
+    "gambar": "assets/makanan/tongseng-ayam-tanpa-santan.png",
     "kalori": 350,
     "protein": 25,
     "lemak": 15,
@@ -187,7 +187,7 @@
   },
   {
     "nama": "Sayur Lodeh (Santan Encer)",
-    "gambar": "placeholder_sayur_lodeh_encer.jpg",
+    "gambar": "assets/makanan/sayur-lodeh.png",
     "kalori": 280,
     "protein": 10,
     "lemak": 15,
@@ -195,7 +195,7 @@
   },
   {
     "nama": "Kare Ayam Rendah Lemak",
-    "gambar": "placeholder_kare_ayam_lite.jpg",
+    "gambar": "assets/makanan/kare-ayam.png",
     "kalori": 320,
     "protein": 28,
     "lemak": 15,
@@ -203,7 +203,7 @@
   },
   {
     "nama": "Tumis Kangkung Bawang Putih",
-    "gambar": "placeholder_tumis_kangkung.jpg",
+    "gambar": "assets/makanan/kangkung-bawang-putih.png",
     "kalori": 90,
     "protein": 3,
     "lemak": 5,
@@ -211,7 +211,7 @@
   },
   {
     "nama": "Ikan Bandeng Presto Kukus",
-    "gambar": "placeholder_bandeng_kukus.jpg",
+    "gambar": "assets/makanan/bandeng-presto-kukus.png",
     "kalori": 260,
     "protein": 35,
     "lemak": 12,
@@ -219,7 +219,7 @@
   },
   {
     "nama": "Oatmeal Buah dan Biji Chia",
-    "gambar": "placeholder_oatmeal_chia.jpg",
+    "gambar": "assets/makanan/oatmeal-buah-dan-biji-chia.png",
     "kalori": 300,
     "protein": 10,
     "lemak": 8,
@@ -227,7 +227,7 @@
   },
   {
     "nama": "Tuna Kaleng Kuah Jeruk",
-    "gambar": "placeholder_tuna_jeruk.jpg",
+    "gambar": "assets/makanan/tuna-kaleng-kuah-jeruk.png",
     "kalori": 180,
     "protein": 25,
     "lemak": 5,
@@ -235,7 +235,7 @@
   },
   {
     "nama": "Nasi Goreng Merah Sayur",
-    "gambar": "placeholder_nasgor_merah.jpg",
+    "gambar": "assets/makanan/nasi-goreng-merah-sayur.png",
     "kalori": 420,
     "protein": 15,
     "lemak": 15,
