@@ -1,0 +1,81 @@
+[
+  {
+    "id": "menu_tinggi_energi",
+    "nama_menu": "Menu Seimbang Energi Tinggi",
+    "keterangan": "Dirancang untuk individu dengan kebutuhan kalori 2500 kkal ke atas (aktivitas sangat aktif, atau atlet). Persentase karbohidrat dan protein sedikit ditingkatkan.",
+    "target_kalori_min": 2500,
+    "distribusi_persentase": {
+      "Sarapan": 20,
+      "Camilan_Pagi": 10,
+      "Makan_Siang": 35,
+      "Camilan_Sore": 10,
+      "Makan_Malam": 25
+    },
+    "komponen_makan": {
+      "Sarapan": [
+        {"item": "Oatmeal dengan susu dan buah beri", "makro": "Karbohidrat Kompleks + Serat"},
+        {"item": "Telur dadar (2 butir) tanpa minyak berlebihan", "makro": "Protein Tinggi"},
+        {"item": "Segelas air putih", "makro": "Hidrasi"}
+      ],
+      "Camilan Pagi": [
+        {"item": "Buah pisang (besar) atau apel", "makro": "Karbohidrat Sederhana"},
+        {"item": "Segenggam kacang almond", "makro": "Lemak Sehat"}
+      ],
+      "Makan Siang": [
+        {"item": "Nasi Merah/Ubi", "makro": "Karbohidrat Kompleks"},
+        {"item": "Dada ayam panggang/tuna", "makro": "Protein Bersih"},
+        {"item": "Sayuran tumis (brokoli, wortel)", "makro": "Vitamin & Serat"},
+        {"item": "Air mineral", "makro": "Hidrasi"}
+      ],
+      "Camilan Sore": [
+        {"item": "Yogurt Greek plain", "makro": "Protein & Probiotik"},
+        {"item": "Sedikit madu/kurma", "makro": "Energi Cepat"}
+      ],
+      "Makan Malam": [
+        {"item": "Kentang Rebus/Pasta Whole Wheat", "makro": "Karbohidrat"},
+        {"item": "Ikan salmon/makarel panggang", "makro": "Protein + Lemak Omega-3"},
+        {"item": "Salad hijau (tanpa dressing kental)", "makro": "Serat"},
+        {"item": "Air hangat", "makro": "Hidrasi"}
+      ]
+    }
+  },
+  {
+    "id": "menu_rendah_energi",
+    "nama_menu": "Menu Defisit Kalori (Diet)",
+    "keterangan": "Dirancang untuk individu dengan kebutuhan kalori di bawah 2000 kkal (aktivitas ringan, atau tujuan penurunan berat badan). Porsi karbohidrat dibatasi dan fokus pada protein tinggi serta serat.",
+    "target_kalori_max": 2000,
+    "distribusi_persentase": {
+      "Sarapan": 25,
+      "Camilan_Pagi": 5,
+      "Makan_Siang": 35,
+      "Camilan_Sore": 10,
+      "Makan_Malam": 25
+    },
+    "komponen_makan": {
+      "Sarapan": [
+        {"item": "Roti gandum utuh (1 lembar)", "makro": "Karbohidrat Kompleks"},
+        {"item": "Alpukat (setengah) atau selai kacang alami", "makro": "Lemak Sehat"},
+        {"item": "Putih telur rebus (3-4 butir)", "makro": "Protein Murni"}
+      ],
+      "Camilan Pagi": [
+        {"item": "Air lemon hangat", "makro": "Detox"},
+        {"item": "Mentimun/Wortel stik", "makro": "Serat Rendah Kalori"}
+      ],
+      "Makan Siang": [
+        {"item": "1/2 Porsi Nasi Putih/Quinoa", "makro": "Karbohidrat Terkontrol"},
+        {"item": "Ikan (Tuna/Lele) kukus/rebus", "makro": "Protein"},
+        {"item": "Lalapan (kemangi, selada) dan sambal tanpa minyak", "makro": "Serat"},
+        {"item": "Air mineral", "makro": "Hidrasi"}
+      ],
+      "Camilan Sore": [
+        {"item": "Kacang kedelai rebus (edamame)", "makro": "Protein Nabati"},
+        {"item": "Teh hijau tanpa gula", "makro": "Antioksidan"}
+      ],
+      "Makan Malam": [
+        {"item": "Sup ayam bening (bukan krim) tanpa karbohidrat tambahan", "makro": "Protein + Hidrasi"},
+        {"item": "Tahu/Tempe kukus atau direbus", "makro": "Protein Nabati"},
+        {"item": "Sayuran hijau yang direbus/kukus", "makro": "Serat"}
+      ]
+    }
+  }
+]

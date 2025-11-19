@@ -1,7 +1,5 @@
-
 const container = document.getElementById("artikelContainer");
 const loadMoreBtn = document.getElementById("loadMoreBtn");
-
 
 const artikelModal = document.getElementById("artikelModal");
 const modalJudul = document.getElementById("modalJudul");
@@ -13,11 +11,40 @@ const modalJam = document.getElementById("modalJam");
 
 let artikelTampil = 0;
 const ARTIKEL_PER_HALAMAN = 6;
+let scrollY = 0;
+let artikelData = []; // Variabel untuk menyimpan data yang di-fetch
 
- 
-  
+/**
+ * Fungsi untuk mengambil data artikel dari file JSON.
+ */
+async function fetchArtikelData() {
+    try {
+        // Lakukan fetch ke file artikelData.json
+        const response = await fetch('artikelData.json'); 
+        
+        // Cek jika respons tidak OK (misal file tidak ditemukan)
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        // Ubah respons menjadi objek JavaScript (array)
+        artikelData = await response.json(); 
+        
+        // Setelah data berhasil diambil, mulai render artikel
+        renderArtikel(); 
+        
+    } catch (error) {
+        console.error("Gagal mengambil data artikel:", error);
+        // Tampilkan pesan error kepada pengguna jika perlu
+        container.innerHTML = `<p class="text-red-500 text-center col-span-full">Gagal memuat artikel. Silakan coba lagi nanti.</p>`;
+    }
+}
 
 
+/**
+ * Fungsi untuk merender artikel ke dalam container.
+ * Sekarang menggunakan 'artikelData' global yang sudah diisi oleh fetch.
+ */
 function renderArtikel() {
   const tampilSekarang = artikelData.slice(
     artikelTampil,
@@ -33,10 +60,13 @@ function renderArtikel() {
       dark:hover:shadow-green-500/20 cursor-pointer group
     `;
 
+    // Pastikan properti artikel aman (misal: jika gambar kosong)
+    const gambarSrc = item.gambar || 'placeholder.png'; 
+
     card.innerHTML = `
       <div class="overflow-hidden">
         <img 
-          src="${item.gambar}" 
+          src="${gambarSrc}" 
           alt="${item.judul}" 
           class="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-105"
         />
@@ -64,31 +94,21 @@ function renderArtikel() {
     `;
 
     card.addEventListener("click", () => bukaDetailArtikel(item));
+    
     container.appendChild(card);
   });
 
   artikelTampil += tampilSekarang.length;
-  loadMoreBtn.classList.toggle("hidden", artikelTampil >= artikelData.length);
+  // Pastikan tombol tersembunyi jika tidak ada data atau sudah semua ditampilkan
+  loadMoreBtn.classList.toggle("hidden", artikelTampil >= artikelData.length || artikelData.length === 0);
 }
 
 
 loadMoreBtn.addEventListener("click", () => {
-  Swal.fire({
-    title: "Coming Soon 🚀",
-    text: "Fitur detail artikel akan segera hadir!",
-    icon: "info",
-    confirmButtonColor: "#16a34a",
-    confirmButtonText: "Oke!",
-    background: document.documentElement.classList.contains("dark")
-      ? "#1f2937"
-      : "#ffffff",
-    color: document.documentElement.classList.contains("dark")
-      ? "#d1fae5"
-      : "#166534",
-  });
+    // Memanggil renderArtikel untuk memuat 6 artikel berikutnya
+    renderArtikel();
 });
 
-let scrollY = 0;
 
 function bukaDetailArtikel(data) {
   modalJudul.textContent = data.judul;
@@ -96,7 +116,6 @@ function bukaDetailArtikel(data) {
 
   modalPenulis.textContent = data.penulis || "Admin";
   modalJam.textContent = data.jam || "Baru saja";
-
   
   if (data.full) {
     const paragraphs = data.full
@@ -107,13 +126,11 @@ function bukaDetailArtikel(data) {
 
     modalIsi.innerHTML = paragraphs;
   } else {
-    modalIsi.innerHTML = `<p>${data.deskripsi}</p>`;
+    modalIsi.innerHTML = `<p class="mb-3 leading-relaxed">${data.deskripsi}</p>`;
   }
 
-  
   scrollY = window.scrollY;
   document.body.style.overflow = "hidden";
-
   
   artikelModal.classList.remove("hidden");
   artikelModal.classList.add("flex");
@@ -124,7 +141,6 @@ function closeModalFunc() {
   artikelModal.classList.add("hidden");
   artikelModal.classList.remove("flex");
 
-  
   document.body.style.overflow = "";
   window.scrollTo(0, scrollY);
 }
@@ -137,5 +153,5 @@ artikelModal.addEventListener("click", (e) => {
   }
 });
 
-renderArtikel();
-  
+// Panggil fungsi fetch saat aplikasi dimulai
+fetchArtikelData();

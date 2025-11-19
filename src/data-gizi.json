@@ -1,0 +1,1691 @@
+[
+  {
+    "nama": "nasi putih",
+    "kalori": 204.0,
+    "protein": 4.4,
+    "lemak": 0.4,
+    "karbo": 44.1
+  },
+  {
+    "nama": "nasi goreng",
+    "kalori": 450.0,
+    "protein": 12.0,
+    "lemak": 15.0,
+    "karbo": 65.0
+  },
+  {
+    "nama": "mie instan rebus",
+    "kalori": 380.0,
+    "protein": 8.0,
+    "lemak": 15.0,
+    "karbo": 52.0
+  },
+  {
+    "nama": "sate ayam (10 tusuk)",
+    "kalori": 375.0,
+    "protein": 30.0,
+    "lemak": 25.0,
+    "karbo": 8.0
+  },
+  {
+    "nama": "gudeg nangka",
+    "kalori": 260.0,
+    "protein": 7.0,
+    "lemak": 15.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "soto ayam",
+    "kalori": 180.0,
+    "protein": 15.0,
+    "lemak": 8.0,
+    "karbo": 12.0
+  },
+  {
+    "nama": "bakso kuah (5 butir)",
+    "kalori": 250.0,
+    "protein": 18.0,
+    "lemak": 10.0,
+    "karbo": 20.0
+  },
+  {
+    "nama": "rendang daging (1 potong)",
+    "kalori": 350.0,
+    "protein": 25.0,
+    "lemak": 28.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "pecel lele",
+    "kalori": 320.0,
+    "protein": 22.0,
+    "lemak": 18.0,
+    "karbo": 15.0
+  },
+  {
+    "nama": "nasi pecel sayur",
+    "kalori": 300.0,
+    "protein": 10.0,
+    "lemak": 12.0,
+    "karbo": 40.0
+  },
+  {
+    "nama": "sayur asem",
+    "kalori": 80.0,
+    "protein": 4.0,
+    "lemak": 2.0,
+    "karbo": 14.0
+  },
+  {
+    "nama": "telur dadar (1 butir)",
+    "kalori": 120.0,
+    "protein": 6.0,
+    "lemak": 10.0,
+    "karbo": 1.0
+  },
+  {
+    "nama": "tempe goreng (2 potong)",
+    "kalori": 160.0,
+    "protein": 12.0,
+    "lemak": 10.0,
+    "karbo": 6.0
+  },
+  {
+    "nama": "tahu goreng (2 potong)",
+    "kalori": 110.0,
+    "protein": 8.0,
+    "lemak": 6.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "ayam goreng (1 potong paha)",
+    "kalori": 240.0,
+    "protein": 25.0,
+    "lemak": 15.0,
+    "karbo": 0.0
+  },
+  {
+    "nama": "ayam bakar (1 potong paha)",
+    "kalori": 200.0,
+    "protein": 30.0,
+    "lemak": 8.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "ikan nila goreng",
+    "kalori": 210.0,
+    "protein": 28.0,
+    "lemak": 10.0,
+    "karbo": 0.0
+  },
+  {
+    "nama": "cah kangkung",
+    "kalori": 60.0,
+    "protein": 3.0,
+    "lemak": 4.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "tumis buncis",
+    "kalori": 70.0,
+    "protein": 3.0,
+    "lemak": 4.0,
+    "karbo": 7.0
+  },
+  {
+    "nama": "perkedel kentang (2 buah)",
+    "kalori": 180.0,
+    "protein": 4.0,
+    "lemak": 14.0,
+    "karbo": 10.0
+  },
+  {
+    "nama": "bubur ayam",
+    "kalori": 280.0,
+    "protein": 15.0,
+    "lemak": 10.0,
+    "karbo": 35.0
+  },
+  {
+    "nama": "lontong sayur",
+    "kalori": 320.0,
+    "protein": 10.0,
+    "lemak": 20.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "ketoprak",
+    "kalori": 400.0,
+    "protein": 18.0,
+    "lemak": 25.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "gado-gado",
+    "kalori": 350.0,
+    "protein": 15.0,
+    "lemak": 20.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "karedok",
+    "kalori": 300.0,
+    "protein": 12.0,
+    "lemak": 18.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "tongseng kambing",
+    "kalori": 420.0,
+    "protein": 30.0,
+    "lemak": 30.0,
+    "karbo": 10.0
+  },
+  {
+    "nama": "sup buntut",
+    "kalori": 380.0,
+    "protein": 28.0,
+    "lemak": 25.0,
+    "karbo": 15.0
+  },
+  {
+    "nama": "pempek kapal selam",
+    "kalori": 360.0,
+    "protein": 15.0,
+    "lemak": 20.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "martabak telur",
+    "kalori": 480.0,
+    "protein": 18.0,
+    "lemak": 35.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "martabak manis (1 potong)",
+    "kalori": 250.0,
+    "protein": 5.0,
+    "lemak": 15.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "es teler",
+    "kalori": 300.0,
+    "protein": 4.0,
+    "lemak": 10.0,
+    "karbo": 50.0
+  },
+  {
+    "nama": "es campur",
+    "kalori": 280.0,
+    "protein": 3.0,
+    "lemak": 8.0,
+    "karbo": 48.0
+  },
+  {
+    "nama": "pisang goreng (2 buah)",
+    "kalori": 220.0,
+    "protein": 3.0,
+    "lemak": 12.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "kopi susu instan",
+    "kalori": 150.0,
+    "protein": 2.0,
+    "lemak": 5.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "teh manis",
+    "kalori": 100.0,
+    "protein": 0.0,
+    "lemak": 0.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "nasi uduk",
+    "kalori": 260.0,
+    "protein": 6.0,
+    "lemak": 10.0,
+    "karbo": 38.0
+  },
+  {
+    "nama": "nasi kuning",
+    "kalori": 280.0,
+    "protein": 6.0,
+    "lemak": 12.0,
+    "karbo": 39.0
+  },
+  {
+    "nama": "capcay",
+    "kalori": 150.0,
+    "protein": 8.0,
+    "lemak": 7.0,
+    "karbo": 12.0
+  },
+  {
+    "nama": "fu yung hai",
+    "kalori": 300.0,
+    "protein": 15.0,
+    "lemak": 18.0,
+    "karbo": 20.0
+  },
+  {
+    "nama": "bistik daging sapi",
+    "kalori": 350.0,
+    "protein": 35.0,
+    "lemak": 20.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "semur jengkol",
+    "kalori": 220.0,
+    "protein": 10.0,
+    "lemak": 15.0,
+    "karbo": 10.0
+  },
+  {
+    "nama": "opor ayam",
+    "kalori": 320.0,
+    "protein": 25.0,
+    "lemak": 22.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "sayur lodeh",
+    "kalori": 180.0,
+    "protein": 6.0,
+    "lemak": 12.0,
+    "karbo": 10.0
+  },
+  {
+    "nama": "sambal terasi",
+    "kalori": 50.0,
+    "protein": 2.0,
+    "lemak": 4.0,
+    "karbo": 3.0
+  },
+  {
+    "nama": "kerupuk udang (2 buah)",
+    "kalori": 100.0,
+    "protein": 1.0,
+    "lemak": 8.0,
+    "karbo": 6.0
+  },
+  {
+    "nama": "kerupuk putih (3 buah)",
+    "kalori": 80.0,
+    "protein": 0.5,
+    "lemak": 6.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "jeruk manis (1 buah)",
+    "kalori": 60.0,
+    "protein": 1.0,
+    "lemak": 0.0,
+    "karbo": 15.0
+  },
+  {
+    "nama": "apel (1 buah)",
+    "kalori": 95.0,
+    "protein": 0.5,
+    "lemak": 0.3,
+    "karbo": 25.0
+  },
+  {
+    "nama": "telur rebus (1 butir)",
+    "kalori": 78.0,
+    "protein": 6.0,
+    "lemak": 5.0,
+    "karbo": 0.6
+  },
+  {
+    "nama": "roti tawar (2 lembar)",
+    "kalori": 150.0,
+    "protein": 5.0,
+    "lemak": 2.0,
+    "karbo": 28.0
+  },
+  {
+    "nama": "roti bakar keju susu",
+    "kalori": 350.0,
+    "protein": 10.0,
+    "lemak": 18.0,
+    "karbo": 40.0
+  },
+  {
+    "nama": "bubur kacang hijau",
+    "kalori": 220.0,
+    "protein": 8.0,
+    "lemak": 5.0,
+    "karbo": 35.0
+  },
+  {
+    "nama": "ketan hitam",
+    "kalori": 250.0,
+    "protein": 6.0,
+    "lemak": 8.0,
+    "karbo": 40.0
+  },
+  {
+    "nama": "kolak pisang",
+    "kalori": 300.0,
+    "protein": 4.0,
+    "lemak": 12.0,
+    "karbo": 45.0
+  },
+  {
+    "nama": "es kelapa muda",
+    "kalori": 150.0,
+    "protein": 2.0,
+    "lemak": 6.0,
+    "karbo": 20.0
+  },
+  {
+    "nama": "sosis bakar (1 buah)",
+    "kalori": 180.0,
+    "protein": 10.0,
+    "lemak": 15.0,
+    "karbo": 2.0
+  },
+  {
+    "nama": "kentang goreng (porsi kecil)",
+    "kalori": 280.0,
+    "protein": 3.0,
+    "lemak": 15.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "spaghetti bolognese",
+    "kalori": 450.0,
+    "protein": 20.0,
+    "lemak": 18.0,
+    "karbo": 55.0
+  },
+  {
+    "nama": "pizza (1 slice)",
+    "kalori": 300.0,
+    "protein": 12.0,
+    "lemak": 15.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "burger keju",
+    "kalori": 420.0,
+    "protein": 20.0,
+    "lemak": 25.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "soto betawi",
+    "kalori": 360.0,
+    "protein": 20.0,
+    "lemak": 25.0,
+    "karbo": 15.0
+  },
+  {
+    "nama": "rawon daging",
+    "kalori": 300.0,
+    "protein": 25.0,
+    "lemak": 18.0,
+    "karbo": 10.0
+  },
+  {
+    "nama": "empal gentong",
+    "kalori": 340.0,
+    "protein": 25.0,
+    "lemak": 22.0,
+    "karbo": 8.0
+  },
+  {
+    "nama": "sayur sop",
+    "kalori": 90.0,
+    "protein": 5.0,
+    "lemak": 3.0,
+    "karbo": 10.0
+  },
+  {
+    "nama": "nasi timbel",
+    "kalori": 250.0,
+    "protein": 5.0,
+    "lemak": 5.0,
+    "karbo": 45.0
+  },
+  {
+    "nama": "ayam geprek",
+    "kalori": 400.0,
+    "protein": 30.0,
+    "lemak": 25.0,
+    "karbo": 10.0
+  },
+  {
+    "nama": "ayam penyet",
+    "kalori": 380.0,
+    "protein": 30.0,
+    "lemak": 22.0,
+    "karbo": 8.0
+  },
+  {
+    "nama": "gurame bakar",
+    "kalori": 250.0,
+    "protein": 35.0,
+    "lemak": 10.0,
+    "karbo": 0.0
+  },
+  {
+    "nama": "cumi goreng tepung",
+    "kalori": 320.0,
+    "protein": 20.0,
+    "lemak": 20.0,
+    "karbo": 15.0
+  },
+  {
+    "nama": "udang saus padang",
+    "kalori": 280.0,
+    "protein": 25.0,
+    "lemak": 15.0,
+    "karbo": 10.0
+  },
+  {
+    "nama": "telur balado",
+    "kalori": 180.0,
+    "protein": 8.0,
+    "lemak": 14.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "oseng tempe",
+    "kalori": 150.0,
+    "protein": 10.0,
+    "lemak": 10.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "oseng tahu",
+    "kalori": 120.0,
+    "protein": 8.0,
+    "lemak": 7.0,
+    "karbo": 4.0
+  },
+  {
+    "nama": "pepes tahu",
+    "kalori": 100.0,
+    "protein": 8.0,
+    "lemak": 5.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "sayur bening bayam",
+    "kalori": 50.0,
+    "protein": 4.0,
+    "lemak": 1.0,
+    "karbo": 8.0
+  },
+  {
+    "nama": "sup jamur",
+    "kalori": 70.0,
+    "protein": 4.0,
+    "lemak": 3.0,
+    "karbo": 8.0
+  },
+  {
+    "nama": "salad buah",
+    "kalori": 180.0,
+    "protein": 3.0,
+    "lemak": 10.0,
+    "karbo": 20.0
+  },
+  {
+    "nama": "susu full cream (1 gelas)",
+    "kalori": 150.0,
+    "protein": 8.0,
+    "lemak": 8.0,
+    "karbo": 12.0
+  },
+  {
+    "nama": "yogurt plain (1 cup)",
+    "kalori": 100.0,
+    "protein": 10.0,
+    "lemak": 3.0,
+    "karbo": 8.0
+  },
+  {
+    "nama": "kue cubit",
+    "kalori": 180.0,
+    "protein": 4.0,
+    "lemak": 10.0,
+    "karbo": 20.0
+  },
+  {
+    "nama": "klepon (3 butir)",
+    "kalori": 150.0,
+    "protein": 2.0,
+    "lemak": 8.0,
+    "karbo": 18.0
+  },
+  {
+    "nama": "onde-onde (1 buah)",
+    "kalori": 130.0,
+    "protein": 3.0,
+    "lemak": 8.0,
+    "karbo": 12.0
+  },
+  {
+    "nama": "bakwan sayur (1 buah)",
+    "kalori": 140.0,
+    "protein": 3.0,
+    "lemak": 10.0,
+    "karbo": 10.0
+  },
+  {
+    "nama": "cireng (3 buah)",
+    "kalori": 150.0,
+    "protein": 1.0,
+    "lemak": 10.0,
+    "karbo": 13.0
+  },
+  {
+    "nama": "cilok (5 butir)",
+    "kalori": 100.0,
+    "protein": 2.0,
+    "lemak": 2.0,
+    "karbo": 18.0
+  },
+  {
+    "nama": "siomay (3 buah)",
+    "kalori": 200.0,
+    "protein": 10.0,
+    "lemak": 12.0,
+    "karbo": 12.0
+  },
+  {
+    "nama": "batagor (3 buah)",
+    "kalori": 300.0,
+    "protein": 15.0,
+    "lemak": 20.0,
+    "karbo": 15.0
+  },
+  {
+    "nama": "nasi padang (komplit)",
+    "kalori": 700.0,
+    "protein": 30.0,
+    "lemak": 40.0,
+    "karbo": 55.0
+  },
+  {
+    "nama": "kari ayam",
+    "kalori": 380.0,
+    "protein": 25.0,
+    "lemak": 25.0,
+    "karbo": 15.0
+  },
+  {
+    "nama": "sayur daun singkong",
+    "kalori": 120.0,
+    "protein": 5.0,
+    "lemak": 8.0,
+    "karbo": 8.0
+  },
+  {
+    "nama": "telur asin (1 butir)",
+    "kalori": 130.0,
+    "protein": 9.0,
+    "lemak": 10.0,
+    "karbo": 1.0
+  },
+  {
+    "nama": "ikan tongkol balado",
+    "kalori": 200.0,
+    "protein": 28.0,
+    "lemak": 8.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "sop iga",
+    "kalori": 380.0,
+    "protein": 30.0,
+    "lemak": 25.0,
+    "karbo": 10.0
+  },
+  {
+    "nama": "bandeng presto",
+    "kalori": 260.0,
+    "protein": 25.0,
+    "lemak": 15.0,
+    "karbo": 0.0
+  },
+  {
+    "nama": "ayam kecap",
+    "kalori": 280.0,
+    "protein": 30.0,
+    "lemak": 15.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "pepes ikan",
+    "kalori": 150.0,
+    "protein": 20.0,
+    "lemak": 7.0,
+    "karbo": 3.0
+  },
+  {
+    "nama": "nasi tim",
+    "kalori": 200.0,
+    "protein": 10.0,
+    "lemak": 5.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "kwetiau goreng",
+    "kalori": 550.0,
+    "protein": 18.0,
+    "lemak": 30.0,
+    "karbo": 55.0
+  },
+  {
+    "nama": "bihun goreng",
+    "kalori": 480.0,
+    "protein": 15.0,
+    "lemak": 25.0,
+    "karbo": 50.0
+  },
+  {
+    "nama": "mie ayam",
+    "kalori": 420.0,
+    "protein": 20.0,
+    "lemak": 20.0,
+    "karbo": 45.0
+  },
+  {
+    "nama": "mie yamin",
+    "kalori": 450.0,
+    "protein": 20.0,
+    "lemak": 25.0,
+    "karbo": 40.0
+  },
+  {
+    "nama": "sayur genjer",
+    "kalori": 70.0,
+    "protein": 3.0,
+    "lemak": 4.0,
+    "karbo": 7.0
+  },
+  {
+    "nama": "kue putu ayu",
+    "kalori": 150.0,
+    "protein": 3.0,
+    "lemak": 8.0,
+    "karbo": 15.0
+  },
+  {
+    "nama": "cappuccino",
+    "kalori": 120.0,
+    "protein": 4.0,
+    "lemak": 5.0,
+    "karbo": 15.0
+  },
+  {
+    "nama": "teh tarik",
+    "kalori": 180.0,
+    "protein": 3.0,
+    "lemak": 6.0,
+    "karbo": 28.0
+  },
+  {
+    "nama": "roti canai (kosong)",
+    "kalori": 250.0,
+    "protein": 5.0,
+    "lemak": 10.0,
+    "karbo": 35.0
+  },
+  {
+    "nama": "nasi liwet",
+    "kalori": 280.0,
+    "protein": 7.0,
+    "lemak": 10.0,
+    "karbo": 40.0
+  },
+  {
+    "nama": "pindang patin",
+    "kalori": 250.0,
+    "protein": 30.0,
+    "lemak": 12.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "brengkes tempoyak",
+    "kalori": 180.0,
+    "protein": 15.0,
+    "lemak": 10.0,
+    "karbo": 8.0
+  },
+  {
+    "nama": "laksa betawi",
+    "kalori": 350.0,
+    "protein": 15.0,
+    "lemak": 20.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "nasi jamblang",
+    "kalori": 300.0,
+    "protein": 10.0,
+    "lemak": 15.0,
+    "karbo": 35.0
+  },
+  {
+    "nama": "nasi krawu",
+    "kalori": 420.0,
+    "protein": 25.0,
+    "lemak": 28.0,
+    "karbo": 20.0
+  },
+  {
+    "nama": "tahu tek",
+    "kalori": 350.0,
+    "protein": 15.0,
+    "lemak": 20.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "tahu campur",
+    "kalori": 380.0,
+    "protein": 20.0,
+    "lemak": 20.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "es dawet",
+    "kalori": 200.0,
+    "protein": 2.0,
+    "lemak": 5.0,
+    "karbo": 35.0
+  },
+  
+  {
+    "nama": "nasi merah",
+    "kalori": 180.0,
+    "protein": 5.0,
+    "lemak": 1.0,
+    "karbo": 38.0
+  },
+  {
+    "nama": "bubur ketan hitam",
+    "kalori": 250.0,
+    "protein": 5.0,
+    "lemak": 8.0,
+    "karbo": 40.0
+  },
+  {
+    "nama": "ayam geprek keju",
+    "kalori": 550.0,
+    "protein": 35.0,
+    "lemak": 35.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "soto tangkar",
+    "kalori": 410.0,
+    "protein": 28.0,
+    "lemak": 30.0,
+    "karbo": 10.0
+  },
+  {
+    "nama": "gule kambing",
+    "kalori": 450.0,
+    "protein": 30.0,
+    "lemak": 35.0,
+    "karbo": 8.0
+  },
+  {
+    "nama": "ikan kembung goreng",
+    "kalori": 230.0,
+    "protein": 30.0,
+    "lemak": 12.0,
+    "karbo": 0.0
+  },
+  {
+    "nama": "ikan bandeng presto",
+    "kalori": 260.0,
+    "protein": 25.0,
+    "lemak": 15.0,
+    "karbo": 0.0
+  },
+  {
+    "nama": "telur ceplok (1 butir)",
+    "kalori": 95.0,
+    "protein": 6.0,
+    "lemak": 7.0,
+    "karbo": 1.0
+  },
+  {
+    "nama": "tempe mendoan (2 potong)",
+    "kalori": 200.0,
+    "protein": 10.0,
+    "lemak": 15.0,
+    "karbo": 8.0
+  },
+  {
+    "nama": "terong balado",
+    "kalori": 150.0,
+    "protein": 3.0,
+    "lemak": 12.0,
+    "karbo": 10.0
+  },
+  {
+    "nama": "sambal goreng kentang",
+    "kalori": 250.0,
+    "protein": 5.0,
+    "lemak": 18.0,
+    "karbo": 18.0
+  },
+  {
+    "nama": "sayur bayam bening",
+    "kalori": 50.0,
+    "protein": 4.0,
+    "lemak": 1.0,
+    "karbo": 8.0
+  },
+  {
+    "nama": "jus jeruk (tanpa gula)",
+    "kalori": 90.0,
+    "protein": 1.0,
+    "lemak": 0.0,
+    "karbo": 22.0
+  },
+  {
+    "nama": "jus alpukat (gula sedikit)",
+    "kalori": 280.0,
+    "protein": 4.0,
+    "lemak": 20.0,
+    "karbo": 20.0
+  },
+  {
+    "nama": "kopi hitam (tanpa gula)",
+    "kalori": 2.0,
+    "protein": 0.0,
+    "lemak": 0.0,
+    "karbo": 0.4
+  },
+  {
+    "nama": "susu skim (1 gelas)",
+    "kalori": 90.0,
+    "protein": 8.0,
+    "lemak": 0.5,
+    "karbo": 13.0
+  },
+  {
+    "nama": "kue lapis",
+    "kalori": 200.0,
+    "protein": 3.0,
+    "lemak": 8.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "lemper ayam",
+    "kalori": 180.0,
+    "protein": 8.0,
+    "lemak": 8.0,
+    "karbo": 20.0
+  },
+  {
+    "nama": "nasi bakar",
+    "kalori": 350.0,
+    "protein": 12.0,
+    "lemak": 15.0,
+    "karbo": 45.0
+  },
+  {
+    "nama": "nasi campur",
+    "kalori": 500.0,
+    "protein": 25.0,
+    "lemak": 25.0,
+    "karbo": 50.0
+  },
+  {
+    "nama": "mie goreng jawa",
+    "kalori": 480.0,
+    "protein": 15.0,
+    "lemak": 20.0,
+    "karbo": 60.0
+  },
+  {
+    "nama": "bihun kuah",
+    "kalori": 350.0,
+    "protein": 12.0,
+    "lemak": 15.0,
+    "karbo": 40.0
+  },
+  {
+    "nama": "pecel ayam",
+    "kalori": 350.0,
+    "protein": 30.0,
+    "lemak": 20.0,
+    "karbo": 10.0
+  },
+  {
+    "nama": "gulai ikan",
+    "kalori": 300.0,
+    "protein": 25.0,
+    "lemak": 20.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "soto banjar",
+    "kalori": 250.0,
+    "protein": 18.0,
+    "lemak": 12.0,
+    "karbo": 15.0
+  },
+  {
+    "nama": "rawon komplit",
+    "kalori": 400.0,
+    "protein": 30.0,
+    "lemak": 25.0,
+    "karbo": 15.0
+  },
+  {
+    "nama": "bakwan jagung (2 buah)",
+    "kalori": 180.0,
+    "protein": 3.0,
+    "lemak": 12.0,
+    "karbo": 15.0
+  },
+  {
+    "nama": "tahu isi (2 buah)",
+    "kalori": 200.0,
+    "protein": 8.0,
+    "lemak": 15.0,
+    "karbo": 10.0
+  },
+  {
+    "nama": "pisang rebus (1 buah)",
+    "kalori": 100.0,
+    "protein": 1.0,
+    "lemak": 0.3,
+    "karbo": 25.0
+  },
+  {
+    "nama": "ubi jalar rebus (100g)",
+    "kalori": 90.0,
+    "protein": 2.0,
+    "lemak": 0.1,
+    "karbo": 21.0
+  },
+  {
+    "nama": "singkong goreng (100g)",
+    "kalori": 300.0,
+    "protein": 1.0,
+    "lemak": 25.0,
+    "karbo": 20.0
+  },
+  {
+    "nama": "jagung rebus (1 buah)",
+    "kalori": 120.0,
+    "protein": 4.0,
+    "lemak": 1.5,
+    "karbo": 25.0
+  },
+  {
+    "nama": "pecel kangkung",
+    "kalori": 150.0,
+    "protein": 5.0,
+    "lemak": 10.0,
+    "karbo": 10.0
+  },
+  {
+    "nama": "tumis sawi",
+    "kalori": 70.0,
+    "protein": 3.0,
+    "lemak": 4.0,
+    "karbo": 6.0
+  },
+  {
+    "nama": "telur puyuh (5 butir)",
+    "kalori": 80.0,
+    "protein": 6.0,
+    "lemak": 5.0,
+    "karbo": 0.5
+  },
+  {
+    "nama": "nugget ayam (3 potong)",
+    "kalori": 180.0,
+    "protein": 10.0,
+    "lemak": 12.0,
+    "karbo": 8.0
+  },
+  {
+    "nama": "sosis goreng (2 buah)",
+    "kalori": 200.0,
+    "protein": 10.0,
+    "lemak": 17.0,
+    "karbo": 2.0
+  },
+  {
+    "nama": "roti gandum (2 lembar)",
+    "kalori": 180.0,
+    "protein": 8.0,
+    "lemak": 3.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "sereal sarapan (1 porsi)",
+    "kalori": 150.0,
+    "protein": 3.0,
+    "lemak": 1.0,
+    "karbo": 32.0
+  },
+  {
+    "nama": "puding cokelat",
+    "kalori": 220.0,
+    "protein": 5.0,
+    "lemak": 8.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "jus tomat",
+    "kalori": 40.0,
+    "protein": 1.0,
+    "lemak": 0.2,
+    "karbo": 9.0
+  },
+  {
+    "nama": "teh tawar",
+    "kalori": 0.0,
+    "protein": 0.0,
+    "lemak": 0.0,
+    "karbo": 0.0
+  },
+  {
+    "nama": "air putih",
+    "kalori": 0.0,
+    "protein": 0.0,
+    "lemak": 0.0,
+    "karbo": 0.0
+  },
+  {
+    "nama": "kue putu",
+    "kalori": 120.0,
+    "protein": 2.0,
+    "lemak": 5.0,
+    "karbo": 18.0
+  },
+  {
+    "nama": "wingko babat",
+    "kalori": 250.0,
+    "protein": 4.0,
+    "lemak": 15.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "getuk lindri",
+    "kalori": 180.0,
+    "protein": 2.0,
+    "lemak": 8.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "dodol garut",
+    "kalori": 150.0,
+    "protein": 1.0,
+    "lemak": 5.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "keripik singkong (50g)",
+    "kalori": 250.0,
+    "protein": 1.0,
+    "lemak": 18.0,
+    "karbo": 20.0
+  },
+  {
+    "nama": "keripik kentang (50g)",
+    "kalori": 270.0,
+    "protein": 2.0,
+    "lemak": 20.0,
+    "karbo": 20.0
+  },
+  {
+    "nama": "wafer cokelat (2 buah)",
+    "kalori": 150.0,
+    "protein": 2.0,
+    "lemak": 8.0,
+    "karbo": 18.0
+  },
+  {
+    "nama": "kue nastar (3 buah)",
+    "kalori": 160.0,
+    "protein": 1.0,
+    "lemak": 10.0,
+    "karbo": 15.0
+  },
+  {
+    "nama": "kue kastengel (3 buah)",
+    "kalori": 150.0,
+    "protein": 5.0,
+    "lemak": 12.0,
+    "karbo": 7.0
+  },
+  {
+    "nama": "ikan sarden kaleng (1/2 kaleng)",
+    "kalori": 150.0,
+    "protein": 15.0,
+    "lemak": 10.0,
+    "karbo": 2.0
+  },
+  {
+    "nama": "kornet sapi (1/2 kaleng)",
+    "kalori": 200.0,
+    "protein": 12.0,
+    "lemak": 18.0,
+    "karbo": 1.0
+  },
+  {
+    "nama": "ayam ungkep (1 potong)",
+    "kalori": 180.0,
+    "protein": 25.0,
+    "lemak": 8.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "daging sapi rebus (100g)",
+    "kalori": 180.0,
+    "protein": 28.0,
+    "lemak": 7.0,
+    "karbo": 0.0
+  },
+  {
+    "nama": "hati ayam goreng (2 buah)",
+    "kalori": 150.0,
+    "protein": 18.0,
+    "lemak": 8.0,
+    "karbo": 2.0
+  },
+  {
+    "nama": "paru sapi goreng (50g)",
+    "kalori": 180.0,
+    "protein": 10.0,
+    "lemak": 15.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "udang rebon kering (1 sdm)",
+    "kalori": 20.0,
+    "protein": 3.0,
+    "lemak": 0.5,
+    "karbo": 1.0
+  },
+  {
+    "nama": "ebi kering (1 sdm)",
+    "kalori": 25.0,
+    "protein": 4.0,
+    "lemak": 0.5,
+    "karbo": 1.0
+  },
+  {
+    "nama": "ikan teri goreng",
+    "kalori": 100.0,
+    "protein": 15.0,
+    "lemak": 5.0,
+    "karbo": 1.0
+  },
+  {
+    "nama": "pepes jamur",
+    "kalori": 80.0,
+    "protein": 4.0,
+    "lemak": 5.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "cah brokoli",
+    "kalori": 60.0,
+    "protein": 4.0,
+    "lemak": 3.0,
+    "karbo": 7.0
+  },
+  {
+    "nama": "sayur capcay kuah",
+    "kalori": 120.0,
+    "protein": 6.0,
+    "lemak": 5.0,
+    "karbo": 12.0
+  },
+  {
+    "nama": "ketupat (1 buah)",
+    "kalori": 160.0,
+    "protein": 3.0,
+    "lemak": 0.5,
+    "karbo": 35.0
+  },
+  {
+    "nama": "lontong (1 buah)",
+    "kalori": 150.0,
+    "protein": 3.0,
+    "lemak": 0.5,
+    "karbo": 33.0
+  },
+  {
+    "nama": "tape singkong",
+    "kalori": 130.0,
+    "protein": 1.0,
+    "lemak": 0.5,
+    "karbo": 30.0
+  },
+  {
+    "nama": "tape ketan",
+    "kalori": 150.0,
+    "protein": 2.0,
+    "lemak": 1.0,
+    "karbo": 32.0
+  },
+  {
+    "nama": "kerupuk bawang (3 buah)",
+    "kalori": 90.0,
+    "protein": 1.0,
+    "lemak": 7.0,
+    "karbo": 6.0
+  },
+  {
+    "nama": "kerupuk kulit (rambak)",
+    "kalori": 120.0,
+    "protein": 15.0,
+    "lemak": 5.0,
+    "karbo": 1.0
+  },
+  {
+    "nama": "sambal matah (1 sdm)",
+    "kalori": 40.0,
+    "protein": 1.0,
+    "lemak": 4.0,
+    "karbo": 1.0
+  },
+  {
+    "nama": "sambal dabu-dabu (1 sdm)",
+    "kalori": 30.0,
+    "protein": 0.5,
+    "lemak": 3.0,
+    "karbo": 1.0
+  },
+  {
+    "nama": "cireng bumbu rujak (3 buah)",
+    "kalori": 180.0,
+    "protein": 2.0,
+    "lemak": 12.0,
+    "karbo": 15.0
+  },
+  {
+    "nama": "cilok kuah (5 butir)",
+    "kalori": 120.0,
+    "protein": 3.0,
+    "lemak": 5.0,
+    "karbo": 18.0
+  },
+  {
+    "nama": "bakpao daging",
+    "kalori": 280.0,
+    "protein": 10.0,
+    "lemak": 10.0,
+    "karbo": 40.0
+  },
+  {
+    "nama": "onde-onde kacang hijau",
+    "kalori": 160.0,
+    "protein": 4.0,
+    "lemak": 10.0,
+    "karbo": 15.0
+  },
+  {
+    "nama": "kopi latte (1 gelas)",
+    "kalori": 180.0,
+    "protein": 6.0,
+    "lemak": 8.0,
+    "karbo": 20.0
+  },
+  {
+    "nama": "teh lemon (gula sedang)",
+    "kalori": 120.0,
+    "protein": 0.0,
+    "lemak": 0.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "susu kedelai (1 gelas)",
+    "kalori": 80.0,
+    "protein": 7.0,
+    "lemak": 3.0,
+    "karbo": 7.0
+  },
+  {
+    "nama": "santan kental (50ml)",
+    "kalori": 120.0,
+    "protein": 1.0,
+    "lemak": 12.0,
+    "karbo": 3.0
+  },
+  {
+    "nama": "mentega (1 sdm)",
+    "kalori": 100.0,
+    "protein": 0.1,
+    "lemak": 11.0,
+    "karbo": 0.1
+  },
+  {
+    "nama": "minyak goreng (1 sdm)",
+    "kalori": 120.0,
+    "protein": 0.0,
+    "lemak": 13.0,
+    "karbo": 0.0
+  },
+  {
+    "nama": "gula pasir (1 sdm)",
+    "kalori": 50.0,
+    "protein": 0.0,
+    "lemak": 0.0,
+    "karbo": 13.0
+  },
+  {
+    "nama": "kecap manis (1 sdm)",
+    "kalori": 30.0,
+    "protein": 1.0,
+    "lemak": 0.0,
+    "karbo": 7.0
+  },
+  {
+    "nama": "saus tomat (1 sdm)",
+    "kalori": 15.0,
+    "protein": 0.5,
+    "lemak": 0.0,
+    "karbo": 3.0
+  },
+  {
+    "nama": "sambal botol (1 sdm)",
+    "kalori": 10.0,
+    "protein": 0.1,
+    "lemak": 0.1,
+    "karbo": 2.0
+  },
+  {
+    "nama": "mie lidi goreng",
+    "kalori": 450.0,
+    "protein": 15.0,
+    "lemak": 20.0,
+    "karbo": 55.0
+  },
+  {
+    "nama": "lumpia goreng (1 buah)",
+    "kalori": 180.0,
+    "protein": 8.0,
+    "lemak": 12.0,
+    "karbo": 10.0
+  },
+  {
+    "nama": "risoles mayo (1 buah)",
+    "kalori": 220.0,
+    "protein": 5.0,
+    "lemak": 18.0,
+    "karbo": 12.0
+  },
+  {
+    "nama": "donat gula (1 buah)",
+    "kalori": 250.0,
+    "protein": 4.0,
+    "lemak": 15.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "kue pukis",
+    "kalori": 160.0,
+    "protein": 4.0,
+    "lemak": 8.0,
+    "karbo": 20.0
+  },
+  {
+    "nama": "serabi kuah",
+    "kalori": 280.0,
+    "protein": 5.0,
+    "lemak": 15.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "es cincau",
+    "kalori": 150.0,
+    "protein": 1.0,
+    "lemak": 0.0,
+    "karbo": 38.0
+  },
+  {
+    "nama": "cendol",
+    "kalori": 220.0,
+    "protein": 2.0,
+    "lemak": 10.0,
+    "karbo": 35.0
+  },
+  {
+    "nama": "air mineral",
+    "kalori": 0.0,
+    "protein": 0.0,
+    "lemak": 0.0,
+    "karbo": 0.0
+  },
+  {
+    "nama": "teh botol",
+    "kalori": 140.0,
+    "protein": 0.0,
+    "lemak": 0.0,
+    "karbo": 35.0
+  },
+  {
+    "nama": "minuman bersoda (kaleng)",
+    "kalori": 150.0,
+    "protein": 0.0,
+    "lemak": 0.0,
+    "karbo": 38.0
+  },
+  {
+    "nama": "susu cokelat kotak",
+    "kalori": 160.0,
+    "protein": 6.0,
+    "lemak": 6.0,
+    "karbo": 22.0
+  },
+  {
+    "nama": "roti abon",
+    "kalori": 280.0,
+    "protein": 10.0,
+    "lemak": 15.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "roti keju",
+    "kalori": 250.0,
+    "protein": 12.0,
+    "lemak": 10.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "kerak telor",
+    "kalori": 300.0,
+    "protein": 18.0,
+    "lemak": 15.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "toge goreng",
+    "kalori": 220.0,
+    "protein": 8.0,
+    "lemak": 12.0,
+    "karbo": 20.0
+  },
+  {
+    "nama": "rujak cingur",
+    "kalori": 400.0,
+    "protein": 15.0,
+    "lemak": 25.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "sate lilit",
+    "kalori": 300.0,
+    "protein": 20.0,
+    "lemak": 20.0,
+    "karbo": 8.0
+  },
+  {
+    "nama": "pecel tahu",
+    "kalori": 180.0,
+    "protein": 10.0,
+    "lemak": 10.0,
+    "karbo": 12.0
+  },
+  {
+    "nama": "tahu gejrot",
+    "kalori": 150.0,
+    "protein": 8.0,
+    "lemak": 10.0,
+    "karbo": 5.0
+  },
+  {
+    "nama": "emping (5 buah)",
+    "kalori": 100.0,
+    "protein": 2.0,
+    "lemak": 8.0,
+    "karbo": 6.0
+  },
+  {
+    "nama": "telur mata sapi (1 butir)",
+    "kalori": 95.0,
+    "protein": 6.0,
+    "lemak": 7.0,
+    "karbo": 1.0
+  },
+  {
+    "nama": "semangka (1 potong)",
+    "kalori": 45.0,
+    "protein": 1.0,
+    "lemak": 0.2,
+    "karbo": 11.0
+  },
+  {
+    "nama": "mangga (1 buah sedang)",
+    "kalori": 135.0,
+    "protein": 1.0,
+    "lemak": 0.5,
+    "karbo": 35.0
+  },
+  {
+    "nama": "anggur (10 buah)",
+    "kalori": 69.0,
+    "protein": 0.5,
+    "lemak": 0.5,
+    "karbo": 18.0
+  },
+  {
+    "nama": "durian (2 biji)",
+    "kalori": 180.0,
+    "protein": 4.0,
+    "lemak": 8.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "Air Putih (1 gelas)",
+    "kalori": 0.0,
+    "protein": 0.0,
+    "lemak": 0.0,
+    "karbo": 0.0
+  },
+  {
+    "nama": "Teh Tawar (1 gelas)",
+    "kalori": 2.0,
+    "protein": 0.0,
+    "lemak": 0.0,
+    "karbo": 0.5
+  },
+  {
+    "nama": "Kopi Hitam Tawar (1 cangkir)",
+    "kalori": 2.0,
+    "protein": 0.2,
+    "lemak": 0.0,
+    "karbo": 0.5
+  },
+  {
+    "nama": "Air Kelapa Murni (1 gelas)",
+    "kalori": 45.0,
+    "protein": 1.0,
+    "lemak": 0.5,
+    "karbo": 10.0
+  },
+  {
+    "nama": "Susu Skim (1 gelas)",
+    "kalori": 85.0,
+    "protein": 8.0,
+    "lemak": 0.5,
+    "karbo": 12.0
+  },
+  {
+    "nama": "Jus Jeruk Murni (1 gelas)",
+    "kalori": 110.0,
+    "protein": 1.0,
+    "lemak": 0.0,
+    "karbo": 25.0
+  },
+  {
+    "nama": "Minuman Energi (1 kaleng)",
+    "kalori": 110.0,
+    "protein": 0.0,
+    "lemak": 0.0,
+    "karbo": 27.0
+  },
+  {
+    "nama": "Teh Manis (1 gelas)",
+    "kalori": 120.0,
+    "protein": 0.0,
+    "lemak": 0.0,
+    "karbo": 30.0
+  },
+  {
+    "nama": "Soda (1 kaleng)",
+    "kalori": 140.0,
+    "protein": 0.0,
+    "lemak": 0.0,
+    "karbo": 38.0
+  },
+  {
+    "nama": "Kopi Susu (1 cangkir)",
+    "kalori": 150.0,
+    "protein": 4.0,
+    "lemak": 6.0,
+    "karbo": 20.0
+  },
+  {
+    "nama": "Susu Full Cream (1 gelas)",
+    "kalori": 150.0,
+    "protein": 8.0,
+    "lemak": 8.0,
+    "karbo": 12.0
+  },
+  {
+    "nama": "Jus Alpukat Gula (1 gelas)",
+    "kalori": 280.0,
+    "protein": 4.0,
+    "lemak": 15.0,
+    "karbo": 35.0
+  },
+  {
+    "nama": "Boba Milk Tea (1 porsi)",
+    "kalori": 300.0,
+    "protein": 5.0,
+    "lemak": 5.0,
+    "karbo": 60.0
+  },
+  {
+    "nama": "Es Teler (1 porsi)",
+    "kalori": 350.0,
+    "protein": 5.0,
+    "lemak": 10.0,
+    "karbo": 60.0
+  }
+  
+]

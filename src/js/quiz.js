@@ -3,14 +3,50 @@ const pilihanContainer = document.getElementById("pilihanContainer");
 const nextBtn = document.getElementById("nextBtn");
 const feedbackEl = document.getElementById("jawaban");
 const progressBar = document.getElementById("progressBar");
+const quizContainer = document.getElementById("quizContainer"); // Elemen aman
 
 // === VARIABEL STATUS ===
 let currentIndex = 0;
 let shuffledQuiz = [];
 let score = 0;
-const poinPerSoal = 10; // setiap jawaban benar dapat 10 poin
+let quizData = []; 
+const poinPerSoal = 10; 
 
-// === FUNGSI UTAMA ===
+
+async function fetchQuizData() {
+    // Tampilkan loading di elemen pertanyaan, bukan menimpa seluruh container.
+    pertanyaanEl.innerHTML = `<span class="text-xl text-center text-green-600 dark:text-green-400 animate-pulse">Memuat soal quiz...</span>`;
+    pilihanContainer.innerHTML = ''; // Kosongkan pilihan saat loading
+    feedbackEl.textContent = ''; // Kosongkan feedback
+
+    try {
+        const response = await fetch('quizData.json'); 
+        
+        
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        quizData = await response.json(); 
+        
+        if (quizData.length === 0) {
+            throw new Error("Data quiz kosong.");
+        }
+        
+        // Setelah data berhasil diambil, langsung mulai quiz
+        mulaiQuiz(); 
+        
+    } catch (error) {
+        console.error("Gagal mengambil data quiz:", error);
+        // Tampilkan error jika gagal
+        pertanyaanEl.innerHTML = `<span class="text-xl text-center text-red-500">Gagal memuat quiz. Cek koneksi atau file JSON Anda. (${error.message})</span>`;
+    }
+}
+
+
+// === FUNGSI UTAMA QUIZ ===
+
 function acakSoal(data) {
   return data.sort(() => Math.random() - 0.5);
 }
@@ -19,12 +55,21 @@ function mulaiQuiz() {
   shuffledQuiz = acakSoal([...quizData]);
   currentIndex = 0;
   score = 0;
+  
+  // Pastikan tombol Next kembali ke mode normal jika sebelumnya menampilkan hasil
+  nextBtn.onclick = handleNextButton; 
   nextBtn.textContent = "Soal Berikutnya →";
+  nextBtn.classList.add("hidden");
+
   tampilkanSoal();
 }
 
 function tampilkanSoal() {
+  if (shuffledQuiz.length === 0) return;
+
   const soal = shuffledQuiz[currentIndex];
+  
+  // LOGIKNYA BENAR: Mengisi konten elemen yang sudah ada
   pertanyaanEl.textContent = soal.pertanyaan;
   pilihanContainer.innerHTML = "";
   feedbackEl.textContent = "";
@@ -52,9 +97,17 @@ function cekJawaban(pilihan, benar, tombol) {
     feedbackEl.textContent = "✅ Benar! Hebat, pilihanmu sehat!";
     feedbackEl.className =
       "mt-4 text-lg font-semibold text-green-600 dark:text-green-400 animate-pulse";
-    score += poinPerSoal; // 🟢 tambah poin jika benar
+    score += poinPerSoal; 
   } else {
     tombol.classList.add("bg-red-500", "text-white", "animate-shake");
+    
+    // Temukan dan tandai jawaban yang benar
+    semuaBtn.forEach((b) => {
+        if (b.textContent === benar) {
+            b.classList.add("bg-green-300", "dark:bg-green-700", "text-white");
+        }
+    });
+
     feedbackEl.textContent = `❌ Salah! Jawaban yang benar: ${benar}`;
     feedbackEl.className =
       "mt-4 text-lg font-semibold text-red-600 dark:text-red-400 animate-shake";
@@ -66,14 +119,16 @@ function cekJawaban(pilihan, benar, tombol) {
   nextBtn.classList.remove("hidden");
 }
 
-nextBtn.addEventListener("click", () => {
+function handleNextButton() {
   currentIndex++;
   if (currentIndex < quizData.length) {
     tampilkanSoal();
   } else {
     tampilkanHasil();
   }
-});
+}
+
+nextBtn.addEventListener("click", handleNextButton);
 
 function tampilkanHasil() {
   const totalPoin = quizData.length * poinPerSoal;
@@ -98,7 +153,7 @@ function tampilkanHasil() {
   `;
   feedbackEl.textContent = "";
   nextBtn.textContent = "🔁 Ulangi Quiz";
-  nextBtn.onclick = mulaiQuiz;
+  nextBtn.onclick = mulaiQuiz; // Set tombol ulangi
   nextBtn.classList.remove("hidden");
 
   // penuhkan progress bar
@@ -106,4 +161,4 @@ function tampilkanHasil() {
 }
 
 // === MULAI ===
-mulaiQuiz();
+fetchQuizData();

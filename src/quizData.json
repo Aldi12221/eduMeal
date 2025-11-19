@@ -1,0 +1,177 @@
+[
+  {
+    "pertanyaan": "Makanan khas Jawa Timur yang memiliki kandungan protein nabati tinggi dan sering dijadikan alternatif lauk pauk sehat adalah?",
+    "pilihan": ["Pecel", "Rawon", "Rujak Cingur", "Tempe"],
+    "jawaban": "Tempe"
+  },
+  {
+    "pertanyaan": "Untuk mengurangi kalori Rawon, bagian yang sebaiknya dibatasi adalah?",
+    "pilihan": ["Daging Sapi", "Tauge", "Kuah Santan/Gajih", "Nasi Putih"],
+    "jawaban": "Kuah Santan/Gajih"
+  },
+  {
+    "pertanyaan": "Buah yang paling mudah didapatkan di kawasan Malang dan Batu (Jatim) dan merupakan sumber Vitamin C yang baik adalah?",
+    "pilihan": ["Apel", "Durian", "Pisang", "Salak"],
+    "jawaban": "Apel"
+  },
+  {
+    "pertanyaan": "Jika Anda mengganti Nasi Putih dengan sumber karbohidrat kompleks lain saat sarapan di Jatim, manakah pilihan yang paling baik?",
+    "pilihan": ["Kerupuk Puli", "Lontong Sayur", "Nasi Goreng", "Jagung Rebus"],
+    "jawaban": "Jagung Rebus"
+  },
+  {
+    "pertanyaan": "Berapa minimal gelas air putih yang disarankan per hari untuk menjaga hidrasi optimal?",
+    "pilihan": ["2 Gelas", "4 Gelas", "8 Gelas", "12 Gelas"],
+    "jawaban": "8 Gelas"
+  },
+  {
+    "pertanyaan": "Makronutrien yang berfungsi utama sebagai pembangun dan perbaikan jaringan tubuh adalah?",
+    "pilihan": ["Lemak", "Protein", "Karbohidrat", "Vitamin"],
+    "jawaban": "Protein"
+  },
+  {
+    "pertanyaan": "Mengapa mengonsumsi Sayur Bayam lebih baik daripada mengonsumsi Kentang Goreng dari segi gizi?",
+    "pilihan": ["Sayur Bayam lebih murah", "Bayam mengandung serat dan vitamin tinggi", "Bayam lebih banyak karbohidrat", "Kentang Goreng rasanya hambar"],
+    "jawaban": "Bayam mengandung serat dan vitamin tinggi"
+  },
+  {
+    "pertanyaan": "Penyakit yang paling berisiko terjadi akibat sering mengonsumsi makanan tinggi garam dan lemak jenuh?",
+    "pilihan": ["Flu", "Darah Tinggi (Hipertensi)", "Maag", "Sakit Kepala"],
+    "jawaban": "Darah Tinggi (Hipertensi)"
+  },
+  {
+    "pertanyaan": "Soto Lamongan (khas Jatim) sering menggunakan koya (bubuk kerupuk udang) dan sedikit minyak. Jika ingin lebih sehat, apa yang bisa dikurangi?",
+    "pilihan": ["Irisan Ayam", "Tauge", "Koya dan Minyak Tambahan", "Jeruk Nipis"],
+    "jawaban": "Koya dan Minyak Tambahan"
+  },
+  {
+    "pertanyaan": "Komponen Rujak Cingur yang menjadi sumber lemak sehat (nabati) utama adalah?",
+    "pilihan": ["Cingur Sapi", "Timun", "Kacang Tanah dalam Bumbu", "Petis"],
+    "jawaban": "Kacang Tanah dalam Bumbu"
+  },
+  {
+    "pertanyaan": "Jenis lemak yang harus dibatasi karena dapat meningkatkan risiko penyakit jantung adalah?",
+    "pilihan": ["Lemak Tak Jenuh Tunggal", "Lemak Trans dan Jenuh", "Lemak Omega-3", "Lemak Nabati"],
+    "jawaban": "Lemak Trans dan Jenuh"
+  },
+  {
+    "pertanyaan": "Sumber karbohidrat kompleks yang dicontohkan dalam 'Tumpeng Gizi Seimbang' adalah?",
+    "pilihan": ["Gula pasir", "Roti Tawar", "Nasi Merah", "Minuman manis"],
+    "jawaban": "Nasi Merah"
+  },
+  {
+    "pertanyaan": "Apa manfaat utama sarapan pagi bagi otak?",
+    "pilihan": ["Meningkatkan rasa kantuk", "Menurunkan berat badan", "Meningkatkan fungsi kognitif dan konsentrasi", "Meningkatkan asam lambung"],
+    "jawaban": "Meningkatkan fungsi kognitif dan konsentrasi"
+  },
+  {
+    "pertanyaan": "Makanan instan seperti mie instan cenderung tinggi dalam kandungan apa?",
+    "pilihan": ["Serat dan Vitamin", "Protein dan Mineral", "Natrium (Garam) dan Lemak", "Air"],
+    "jawaban": "Natrium (Garam) dan Lemak"
+  },
+  {
+    "pertanyaan": "Vitamin apa yang paling banyak ditemukan dalam buah-buahan dan membantu meningkatkan daya tahan tubuh?",
+    "pilihan": ["Vitamin K", "Vitamin A", "Vitamin C", "Vitamin D"],
+    "jawaban": "Vitamin C"
+  },
+  {
+    "pertanyaan": "Kondisi tubuh akibat kekurangan cairan yang dapat menyebabkan sakit kepala dan kelelahan disebut?",
+    "pilihan": ["Hipoglikemia", "Hipertensi", "Dehidrasi", "Anemia"],
+    "jawaban": "Dehidrasi"
+  },
+  {
+    "pertanyaan": "Salah satu makanan khas Malang yang dibuat dari tempe, namun sering digoreng dan mengandung banyak minyak adalah?",
+    "pilihan": ["Bakso Malang", "Cwie Mie", "Mendol", "Nasi Jagung"],
+    "jawaban": "Mendol"
+  },
+  {
+    "pertanyaan": "Metode memasak yang paling disarankan untuk menjaga kandungan nutrisi makanan adalah?",
+    "pilihan": ["Menggoreng", "Merebus/Mengukus", "Menumis dengan banyak minyak", "Membakar hingga hangus"],
+    "jawaban": "Merebus/Mengukus"
+  },
+  {
+    "pertanyaan": "Jika Anda merasa lapar di malam hari, pilihan camilan terbaik dan rendah kalori adalah?",
+    "pilihan": ["Kue manis", "Biskuit kemasan", "Buah segar atau sayur", "Mie instan"],
+    "jawaban": "Buah segar atau sayur"
+  },
+  {
+    "pertanyaan": "Bahan pangan lokal Jatim pengganti nasi yang memiliki indeks glikemik lebih rendah sehingga baik untuk penderita diabetes adalah?",
+    "pilihan": ["Singkong", "Gula Tebu", "Roti Putih", "Kerupuk"],
+    "jawaban": "Singkong"
+  },
+  {
+    "pertanyaan": "Apa tujuan utama dari mengonsumsi serat yang cukup?",
+    "pilihan": ["Menaikkan gula darah", "Melancarkan pencernaan", "Menambah lemak tubuh", "Mengurangi kebutuhan air"],
+    "jawaban": "Melancarkan pencernaan"
+  },
+  {
+    "pertanyaan": "Minuman yang harus dibatasi konsumsinya karena tinggi gula dan kalori kosong adalah?",
+    "pilihan": ["Air Putih", "Teh Tawar", "Kopi Hitam Tawar", "Minuman Soda"],
+    "jawaban": "Minuman Soda"
+  },
+  {
+    "pertanyaan": "Berapa lama waktu ideal berolahraga setiap minggunya (minimal)?",
+    "pilihan": ["30 menit", "60 menit", "150 menit", "5 jam"],
+    "jawaban": "150 menit"
+  },
+  {
+    "pertanyaan": "Defisit kalori adalah kunci utama untuk mencapai tujuan apa?",
+    "pilihan": ["Menaikkan berat badan", "Menurunkan berat badan", "Menambah massa otot", "Meningkatkan tinggi badan"],
+    "jawaban": "Menurunkan berat badan"
+  },
+  {
+    "pertanyaan": "Contoh makanan yang merupakan sumber protein hewani tinggi dan rendah lemak (jika tanpa kulit) adalah?",
+    "pilihan": ["Daging Sapi Berlemak", "Ikan Salmon", "Ayam Dada Tanpa Kulit", "Gorengan"],
+    "jawaban": "Ayam Dada Tanpa Kulit"
+  },
+  {
+    "pertanyaan": "Apa yang dimaksud dengan kalori kosong?",
+    "pilihan": ["Makanan tanpa lemak", "Makanan yang hanya menyediakan energi dari gula tanpa nutrisi lain", "Makanan yang dimakan saat perut kosong", "Makanan rendah karbohidrat"],
+    "jawaban": "Makanan yang hanya menyediakan energi dari gula tanpa nutrisi lain"
+  },
+  {
+    "pertanyaan": "Konsep gizi modern yang menggantikan '4 Sehat 5 Sempurna' adalah?",
+    "pilihan": ["Gizi Plus", "Tumpeng Gizi Seimbang", "Diet Ketat", "Food Combining"],
+    "jawaban": "Tumpeng Gizi Seimbang"
+  },
+  {
+    "pertanyaan": "Pola makan yang tepat untuk mencegah penyakit maag adalah?",
+    "pilihan": ["Makan hanya sekali sehari", "Melewatkan sarapan", "Makan teratur dengan porsi kecil", "Minum kopi saat perut kosong"],
+    "jawaban": "Makan teratur dengan porsi kecil"
+  },
+  {
+    "pertanyaan": "Selain protein, Tempe (yang terkenal di Jatim) juga merupakan sumber yang baik dari apa?",
+    "pilihan": ["Kolesterol Tinggi", "Lemak Jenuh", "Vitamin B12 dan Zat Besi", "Gula"],
+    "jawaban": "Vitamin B12 dan Zat Besi"
+  },
+  {
+    "pertanyaan": "Tanda awal dehidrasi yang harus segera diatasi dengan minum air adalah?",
+    "pilihan": ["Demam Tinggi", "Rasa Haus", "Tangan Berkeringat", "Nyeri Otot"],
+    "jawaban": "Rasa Haus"
+  },
+  {
+    "pertanyaan": "Mengonsumsi makanan kaya serat membantu dalam hal apa?",
+    "pilihan": ["Membuat kulit berminyak", "Menjaga kadar gula darah tetap stabil", "Meningkatkan kolesterol", "Menambah berat badan dengan cepat"],
+    "jawaban": "Menjaga kadar gula darah tetap stabil"
+  },
+  {
+    "pertanyaan": "Makanan 'cemilan' khas Jatim seperti Pisang Goreng, meskipun lezat, tinggi dalam kandungan apa?",
+    "pilihan": ["Air", "Protein", "Minyak/Lemak dan Karbohidrat Sederhana", "Vitamin C"],
+    "jawaban": "Minyak/Lemak dan Karbohidrat Sederhana"
+  },
+  {
+    "pertanyaan": "Apa yang harus Anda lakukan jika ingin meningkatkan massa otot melalui gizi?",
+    "pilihan": ["Meningkatkan asupan air saja", "Meningkatkan asupan protein", "Mengurangi semua jenis karbohidrat", "Hanya makan sayur"],
+    "jawaban": "Meningkatkan asupan protein"
+  },
+  {
+    "pertanyaan": "Contoh sarapan ringan khas Jatim yang relatif sehat dan kaya serat adalah?",
+    "pilihan": ["Nasi Pecel", "Lontong Kikil", "Sate Kelapa", "Kopi Susu Gula Aren"],
+    "jawaban": "Nasi Pecel"
+  },
+  {
+    "pertanyaan": "Dalam hidangan Gado-Gado atau Pecel (khas Jatim), manakah yang menjadi sumber utama serat dan vitamin?",
+    "pilihan": ["Nasi", "Lauk Pauk (Telur/Tempe)", "Sayuran Rebus", "Bumbu Kacang"],
+    "jawaban": "Sayuran Rebus"
+  }
+]
