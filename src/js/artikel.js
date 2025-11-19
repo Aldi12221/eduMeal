@@ -14,7 +14,7 @@ const modalJam = document.getElementById("modalJam");
 let artikelTampil = 0;
 const ARTIKEL_PER_HALAMAN = 6;
 
-let scrollY = 0; 
+ 
   
 
 
@@ -88,7 +88,7 @@ loadMoreBtn.addEventListener("click", () => {
   });
 });
 
-
+let scrollY = 0;
 
 function bukaDetailArtikel(data) {
   modalJudul.textContent = data.judul;
@@ -112,12 +112,7 @@ function bukaDetailArtikel(data) {
 
   
   scrollY = window.scrollY;
-
-  document.body.style.position = "fixed";
-  document.body.style.top = `-${scrollY}px`;
-  document.body.style.left = "0";
-  document.body.style.right = "0";
-  document.body.style.width = "100%";
+  document.body.style.overflow = "hidden";
 
   
   artikelModal.classList.remove("hidden");
@@ -125,18 +120,12 @@ function bukaDetailArtikel(data) {
 }
 
 
-
 function closeModalFunc() {
   artikelModal.classList.add("hidden");
   artikelModal.classList.remove("flex");
 
   
-  document.body.style.position = "";
-  document.body.style.top = "";
-  document.body.style.left = "";
-  document.body.style.right = "";
-  document.body.style.width = "";
-
+  document.body.style.overflow = "";
   window.scrollTo(0, scrollY);
 }
 
