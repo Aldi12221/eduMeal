@@ -105,8 +105,14 @@ function renderArtikel() {
 
 
 loadMoreBtn.addEventListener("click", () => {
-    // Memanggil renderArtikel untuk memuat 6 artikel berikutnya
-    renderArtikel();
+    
+    Swal.fire({
+        title: "Fitur Segera Hadir! 🚀",
+        text: "Fitur 'Tampilkan Selengkapnya' untuk artikel sedang dalam pengembangan. Mohon tunggu sebentar ya!",
+        icon: "info",
+        confirmButtonText: "OK",
+        confirmButtonColor: "#10b981", // Warna hijau (emerald-500/600)
+    });
 });
 
 

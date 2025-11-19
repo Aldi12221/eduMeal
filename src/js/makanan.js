@@ -131,6 +131,8 @@ function attachPaginationListeners() {
 
 // --- FUNGSI RENDER UTAMA ---
 
+// --- FUNGSI RENDER UTAMA ---
+
 function renderData(filter = "", append = false) {
     // 🔑 PERUBAHAN KRUSIAL: Atur itemsPerPage di awal render
     itemsPerPage = getItemsPerPage(); 
@@ -167,7 +169,7 @@ function renderData(filter = "", append = false) {
     
     const dataToRender = filteredData.slice(startIndex, endIndex);
     
-    // --- 3. RENDERING CARDS ---
+    // --- 3. RENDERING CARDS (Kode ini tetap sama) ---
     dataToRender.forEach((m) => {
         const rating = getHealthRating(m);
 
@@ -223,10 +225,10 @@ function renderData(filter = "", append = false) {
         listMakanan.appendChild(card);
     });
     
-    // --- 4. KONTROL TAMPILAN ---
+    // --- 4. KONTROL TAMPILAN (Bagian yang diubah) ---
     
     if (isPaginationMode) {
-        // Gunakan pagination controls untuk layar besar
+        // Gunakan pagination controls untuk layar besar (kode tetap sama)
         createPaginationControls(filteredData.length, filter);
 
     } else {
@@ -242,8 +244,12 @@ function renderData(filter = "", append = false) {
                         Tampilkan ${Math.min(itemsPerPage, remaining)} Selengkapnya (${remaining} Tersisa)
                     </button>
                 `;
+                
+                
                 document.getElementById("loadMoreBtn").addEventListener("click", () => {
-                    renderData(filter, true); // true = append
+                   
+                   connsole.log("Tombol 'Tampilkan Selengkapnya' diklik");
+                   
                 });
             } else if (filteredData.length > 0) {
                 loadMoreContainer.innerHTML = `<p class="text-center text-gray-500 dark:text-gray-400 mt-4 col-span-full">Semua ${filteredData.length} item telah ditampilkan.</p>`;
