@@ -75,7 +75,7 @@ function tampilkanSoal() {
   nextBtn.classList.add("hidden");
 
   
-  progressBar.style.width = `${(currentIndex / quizData.length) * 100}%`;
+  progressBar.style.width = `${(currentIndex / 20) * 100}%`;
 
   soal.pilihan.forEach((pilihan) => {
     const btn = document.createElement("button");
@@ -113,14 +113,14 @@ function cekJawaban(pilihan, benar, tombol) {
   }
 
  
-  progressBar.style.width = `${((currentIndex + 1) / quizData.length) * 100}%`;
+  progressBar.style.width = `${((currentIndex + 1) / 20) * 100}%`;
 
   nextBtn.classList.remove("hidden");
 }
 
 function handleNextButton() {
   currentIndex++;
-  if (currentIndex < quizData.length) {
+  if (currentIndex < 20) {
     tampilkanSoal();
   } else {
     tampilkanHasil();
@@ -130,7 +130,7 @@ function handleNextButton() {
 nextBtn.addEventListener("click", handleNextButton);
 
 function tampilkanHasil() {
-  const totalPoin = quizData.length * poinPerSoal;
+  const totalPoin = 10 * poinPerSoal;
   const persentase = Math.round((score / totalPoin) * 100);
 
   let pesan = "";

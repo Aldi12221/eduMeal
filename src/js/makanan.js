@@ -293,7 +293,7 @@ input.addEventListener("input", (e) => {
 
 
 window.addEventListener('resize', () => {
-    
+        
     renderData(input.value || "", false); 
 });
 
