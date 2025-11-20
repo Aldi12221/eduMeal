@@ -3,9 +3,8 @@ const pilihanContainer = document.getElementById("pilihanContainer");
 const nextBtn = document.getElementById("nextBtn");
 const feedbackEl = document.getElementById("jawaban");
 const progressBar = document.getElementById("progressBar");
-const quizContainer = document.getElementById("quizContainer"); // Elemen aman
+const quizContainer = document.getElementById("quizContainer"); 
 
-// === VARIABEL STATUS ===
 let currentIndex = 0;
 let shuffledQuiz = [];
 let score = 0;
@@ -14,10 +13,10 @@ const poinPerSoal = 10;
 
 
 async function fetchQuizData() {
-    // Tampilkan loading di elemen pertanyaan, bukan menimpa seluruh container.
+    
     pertanyaanEl.innerHTML = `<span class="text-xl text-center text-green-600 dark:text-green-400 animate-pulse">Memuat soal quiz...</span>`;
-    pilihanContainer.innerHTML = ''; // Kosongkan pilihan saat loading
-    feedbackEl.textContent = ''; // Kosongkan feedback
+    pilihanContainer.innerHTML = ''; 
+    feedbackEl.textContent = '';
 
     try {
         const response = await fetch('quizData.json'); 
@@ -34,18 +33,18 @@ async function fetchQuizData() {
             throw new Error("Data quiz kosong.");
         }
         
-        // Setelah data berhasil diambil, langsung mulai quiz
+        
         mulaiQuiz(); 
         
     } catch (error) {
         console.error("Gagal mengambil data quiz:", error);
-        // Tampilkan error jika gagal
+        
         pertanyaanEl.innerHTML = `<span class="text-xl text-center text-red-500">Gagal memuat quiz. Cek koneksi atau file JSON Anda. (${error.message})</span>`;
     }
 }
 
 
-// === FUNGSI UTAMA QUIZ ===
+
 
 function acakSoal(data) {
   return data.sort(() => Math.random() - 0.5);
@@ -56,7 +55,7 @@ function mulaiQuiz() {
   currentIndex = 0;
   score = 0;
   
-  // Pastikan tombol Next kembali ke mode normal jika sebelumnya menampilkan hasil
+  
   nextBtn.onclick = handleNextButton; 
   nextBtn.textContent = "Soal Berikutnya →";
   nextBtn.classList.add("hidden");
@@ -69,13 +68,13 @@ function tampilkanSoal() {
 
   const soal = shuffledQuiz[currentIndex];
   
-  // LOGIKNYA BENAR: Mengisi konten elemen yang sudah ada
+  
   pertanyaanEl.textContent = soal.pertanyaan;
   pilihanContainer.innerHTML = "";
   feedbackEl.textContent = "";
   nextBtn.classList.add("hidden");
 
-  // update progress bar
+  
   progressBar.style.width = `${(currentIndex / quizData.length) * 100}%`;
 
   soal.pilihan.forEach((pilihan) => {
@@ -101,7 +100,7 @@ function cekJawaban(pilihan, benar, tombol) {
   } else {
     tombol.classList.add("bg-red-500", "text-white", "animate-shake");
     
-    // Temukan dan tandai jawaban yang benar
+   
     semuaBtn.forEach((b) => {
         if (b.textContent === benar) {
             b.classList.add("bg-green-300", "dark:bg-green-700", "text-white");
@@ -113,7 +112,7 @@ function cekJawaban(pilihan, benar, tombol) {
       "mt-4 text-lg font-semibold text-red-600 dark:text-red-400 animate-shake";
   }
 
-  // update progress bar
+ 
   progressBar.style.width = `${((currentIndex + 1) / quizData.length) * 100}%`;
 
   nextBtn.classList.remove("hidden");
@@ -153,12 +152,12 @@ function tampilkanHasil() {
   `;
   feedbackEl.textContent = "";
   nextBtn.textContent = "🔁 Ulangi Quiz";
-  nextBtn.onclick = mulaiQuiz; // Set tombol ulangi
+  nextBtn.onclick = mulaiQuiz; 
   nextBtn.classList.remove("hidden");
 
-  // penuhkan progress bar
+ 
   progressBar.style.width = "100%";
 }
 
-// === MULAI ===
+
 fetchQuizData();

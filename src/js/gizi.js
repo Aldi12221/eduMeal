@@ -16,7 +16,7 @@ const closeHasil = document.getElementById("closeHasil");
 cekBtn.disabled = true;
 cekBtn.textContent = 'Memuat Data Gizi ';
 
-// --- FUNGSI PEMUATAN DATA DARI JSON ---
+
 async function fetchGiziData() {
     try {
         const response = await fetch(GIZI_JSON_FILE);
@@ -27,7 +27,7 @@ async function fetchGiziData() {
         dataGizi = await response.json();
         
         
-        // Aktifkan tombol setelah data siap
+        
         cekBtn.disabled = false; 
         cekBtn.textContent = 'Cek Gizi';
 
@@ -43,22 +43,21 @@ async function fetchGiziData() {
     }
 }
 
-// Panggil fungsi pemuatan data
+
 fetchGiziData();
 
-// 🚀 FUNGSI BARU: Pencarian Fleksibel (Case-Insensitive & Substring)
+
 function findGiziData(query) {
     const cleanQuery = query.trim().toLowerCase();
 
-    // Mencari data yang namanya mengandung (includes) query
+   
     return dataGizi.find((d) => d.nama.toLowerCase().includes(cleanQuery));
 }
 
-// --- EVENT LISTENER CEK GIZI ---
+
 cekBtn.addEventListener("click", () => {
     const input = inputMenu.value.toLowerCase();
     
-    // Pengecekan data sudah dimuat
     if (dataGizi.length === 0) {
         Swal.fire({
             icon: "info",
@@ -89,9 +88,9 @@ cekBtn.addEventListener("click", () => {
     let tidakDitemukan = [];
     let menuDetailList = []; 
 
-    // Proses semua menu menggunakan fungsi pencarian fleksibel
+   
     daftarMenu.forEach((menu) => {
-        // PERUBAHAN UTAMA: Memanggil fungsi findGiziData yang baru
+        
         const data = findGiziData(menu); 
 
         if (data) {
@@ -100,7 +99,7 @@ cekBtn.addEventListener("click", () => {
             total.lemak += data.lemak;
             total.karbo += data.karbo;
             
-            // Tampilkan nama yang sesuai dari database (data.nama)
+           
             let sumber = "Database "; 
             menuDetailList.push(`<li>${data.nama} (${data.kalori.toFixed(1)} kcal) - Sumber: ${sumber}</li>`);
         } else {
@@ -145,7 +144,7 @@ cekBtn.addEventListener("click", () => {
     cekGiziSection.classList.add("pb-24");
 });
 
-// Listener tombol tutup hasil tetap sama
+
 closeHasil.addEventListener("click", () => {
     hasilBox.classList.remove("opacity-100", "scale-100");
     hasilBox.classList.add("opacity-0", "scale-95");

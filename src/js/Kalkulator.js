@@ -1,4 +1,4 @@
-// --- Fungsi Baru untuk Menutup Card ---
+
 function closeCard(elementId) {
   const card = document.getElementById(elementId);
   if (card) {
@@ -6,7 +6,7 @@ function closeCard(elementId) {
   }
 }
 
-// --- Fungsi hitungKalori() yang Dimodifikasi ---
+
 async function hitungKalori() {
   const berat = parseFloat(document.getElementById("berat").value);
   const tinggi = parseFloat(document.getElementById("tinggi").value);
@@ -37,10 +37,10 @@ async function hitungKalori() {
   }
   const kebutuhan = parseInt((bmr * aktivitas).toFixed(0));
 
-  // 1. Dapatkan Rekomendasi Menu dari JSON
+  
   const rekomendasiHTML = await getMenuRekomendasi(kebutuhan);
 
-  // 2. Tampilkan Hasil Akhir dengan Tombol Close di Card Utama
+  
   document.getElementById("hasil").innerHTML = `
         <div class="relative p-6 bg-white dark:bg-gray-800 rounded-lg shadow-xl border border-green-200 dark:border-green-700">
             <button 
@@ -59,7 +59,6 @@ async function hitungKalori() {
     `;
 }
 
-// --- FUNGSI GET MENU REKOMENDASI YANG TELAH DIPERBAIKI ---
 async function getMenuRekomendasi(kebutuhanKalori) {
   try {
     const response = await fetch("rekomendasiMenu.json");
@@ -68,7 +67,7 @@ async function getMenuRekomendasi(kebutuhanKalori) {
     }
     const menuTemplates = await response.json();
 
-    // 1. LOGIKA PEMILIHAN TEMPLATE
+   
     let menu;
     if (kebutuhanKalori >= 2500) {
       menu = menuTemplates.find((t) => t.id === "menu_tinggi_energi");
@@ -92,18 +91,16 @@ async function getMenuRekomendasi(kebutuhanKalori) {
                     <tbody class="divide-y divide-gray-200 dark:divide-gray-700 text-gray-700 dark:text-gray-300">
         `;
 
-    // 2. ITERASI & MAPPING
+    
     for (const waktuMakanKey in distribusi) {
       const persentase = distribusi[waktuMakanKey];
       const kaloriWaktuMakan = Math.round(kebutuhanKalori * (persentase / 100));
 
-      // Perbaikan Krusial (Mengubah underscore menjadi spasi):
+     
       const kunciMenu = waktuMakanKey.replace("_", " ");
-
-      // SOLUSI: Pastikan menuItemsToMap SELALU array, jika tidak ditemukan di JSON, gunakan []
       const menuItemsToMap = komponenMenu[kunciMenu] || [];
 
-      // Mapping sekarang aman karena menuItemsToMap pasti array
+      
       const listItems = menuItemsToMap
         .map(
           (c) => `
@@ -114,7 +111,7 @@ async function getMenuRekomendasi(kebutuhanKalori) {
         )
         .join("");
 
-      // Pengecekan tambahan jika array ditemukan tetapi kosong
+     
       const finalListItem =
         listItems === ""
           ? '<li class="text-xs text-yellow-500 italic break-words">Menu belum disarankan.</li>'

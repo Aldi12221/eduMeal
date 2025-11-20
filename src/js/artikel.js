@@ -12,39 +12,32 @@ const modalJam = document.getElementById("modalJam");
 let artikelTampil = 0;
 const ARTIKEL_PER_HALAMAN = 6;
 let scrollY = 0;
-let artikelData = []; // Variabel untuk menyimpan data yang di-fetch
+let artikelData = []; 
 
-/**
- * Fungsi untuk mengambil data artikel dari file JSON.
- */
+
 async function fetchArtikelData() {
     try {
-        // Lakukan fetch ke file artikelData.json
+       
         const response = await fetch('artikelData.json'); 
         
-        // Cek jika respons tidak OK (misal file tidak ditemukan)
+        
         if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
-        
-        // Ubah respons menjadi objek JavaScript (array)
         artikelData = await response.json(); 
         
-        // Setelah data berhasil diambil, mulai render artikel
+       
         renderArtikel(); 
         
     } catch (error) {
         console.error("Gagal mengambil data artikel:", error);
-        // Tampilkan pesan error kepada pengguna jika perlu
+       
         container.innerHTML = `<p class="text-red-500 text-center col-span-full">Gagal memuat artikel. Silakan coba lagi nanti.</p>`;
     }
 }
 
 
-/**
- * Fungsi untuk merender artikel ke dalam container.
- * Sekarang menggunakan 'artikelData' global yang sudah diisi oleh fetch.
- */
+
 function renderArtikel() {
   const tampilSekarang = artikelData.slice(
     artikelTampil,
@@ -60,7 +53,7 @@ function renderArtikel() {
       dark:hover:shadow-green-500/20 cursor-pointer group
     `;
 
-    // Pastikan properti artikel aman (misal: jika gambar kosong)
+   
     const gambarSrc = item.gambar || 'placeholder.png'; 
 
     card.innerHTML = `
@@ -99,7 +92,7 @@ function renderArtikel() {
   });
 
   artikelTampil += tampilSekarang.length;
-  // Pastikan tombol tersembunyi jika tidak ada data atau sudah semua ditampilkan
+  
   loadMoreBtn.classList.toggle("hidden", artikelTampil >= artikelData.length || artikelData.length === 0);
 }
 
@@ -111,7 +104,7 @@ loadMoreBtn.addEventListener("click", () => {
         text: "Fitur 'Tampilkan Selengkapnya' untuk artikel sedang dalam pengembangan. Mohon tunggu sebentar ya!",
         icon: "info",
         confirmButtonText: "OK",
-        confirmButtonColor: "#10b981", // Warna hijau (emerald-500/600)
+        confirmButtonColor: "#10b981", 
     });
 });
 
@@ -159,5 +152,5 @@ artikelModal.addEventListener("click", (e) => {
   }
 });
 
-// Panggil fungsi fetch saat aplikasi dimulai
+
 fetchArtikelData();
